@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React from 'react';
 import "./ButtonG.css";
 
 
@@ -11,9 +11,9 @@ interface Iprops{
 
 const ButtonG: React.FC<Iprops> = (props:Iprops) => {
       return (
-            <button className= {`button  ${props.class}`}  >
-                  <img src={props.src} alt={props.alt}/> 
+            <button className= {`button  ${props.class}`}>
                   {props.name}
+                  <img src={props.src} alt={props.alt}/> 
             </button>
       )
 }
