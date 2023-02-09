@@ -1,0 +1,112 @@
+{ 
+    "chefs":[
+    {
+      "id":1,
+      "name": "yosi",
+      "portrait": "",
+      "restaurants": [],
+      "isChefOfTheWeek": false,
+      "isNew": false,
+      "viewCount": "",
+      "mostViewed": true
+
+    },
+    {
+      "id":1,
+      "name": "yosi",
+      "portrait": "",
+      "restaurants": [],
+      "isChefOfTheWeek": false,
+      "isNew": false,
+      "viewCount": ""
+    },
+    {
+      "id":1,
+      "name": "yosi",
+      "portrait": "",
+      "restaurants": [],
+      "isChefOfTheWeek": false,
+      "isNew": false,
+      "viewCount": ""
+    },
+   ],
+    "restaurants":[
+      {
+        "id":1,
+        "name": "",
+        "image": "",
+        "chefId": "",
+        "hours": "",
+        "address": "",
+        "rating": "",
+        "dishes": [[], [], []]
+      },
+      {
+        "id":1,
+        "name": "",
+        "image": "",
+        "chefId": "",
+        "hours": "",
+        "address": "",
+        "rating": "",
+        "dishes": [[], [], []]
+      },      
+      {
+        "id":1,
+        "name": "",
+        "image": "",
+        "chefId": "",
+        "hours": "",
+        "address": "",
+        "rating": "",
+        "dishes": [[], [], []]
+      }
+   ],
+    "dishes":[
+      {
+        "id": 1,
+        "name": "",
+        "image": "",
+        "price": "",
+        "chefId": "",
+        "restaurantId": "",
+        "ingredients": "",
+        "isSignatueDish": true,
+        "isSpicy": "",
+        "isVegan": "",
+        "isVegitarian": "",
+        "optionalSides": [],
+        "optionalChanges": []
+      },
+      {
+        "id": 1,
+        "name": "",
+        "image": "",
+        "price": "",
+        "chefId": "",
+        "restaurantId": "",
+        "ingredients": "",
+        "isSignatueDish": true,
+        "isSpicy": "",
+        "isVegan": "",
+        "isVegitarian": "",
+        "optionalSides": [],
+        "optionalChanges": []
+      },
+      {
+        "id": 1,
+        "name": "",
+        "image": "",
+        "price": "",
+        "chefId": "",
+        "restaurantId": "",
+        "ingredients": "",
+        "isSignatueDish": true,
+        "isSpicy": "",
+        "isVegan": "",
+        "isVegitarian": "",
+        "optionalSides": [],
+        "optionalChanges": []
+      }
+   ]  
+}

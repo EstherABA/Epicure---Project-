@@ -1,7 +1,12 @@
 .button{
     all: unset;
+    font-family: "Helvetica Neue Thin";
 }
 
 button:hover {
     cursor: pointer;
+}
+.search-icon{
+    padding: 10px;
+    border: 0;
 }

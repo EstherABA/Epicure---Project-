@@ -9,17 +9,18 @@ import User from '../../assets/icon/User.svg'
 
 const NavBar: React.FC = () => {
     return (
+
         <div className='nav-bar'> 
             <div className='side left'>
                 <ButtonG src={logoEpicure} alt="logo"/>
-                <ButtonG name="Restaurants"/>
-                <ButtonG name="Chefs" />
+                <ButtonG  name="Restaurants"/>
+                <ButtonG  name="Chefs" />
             </div>
 
             <div className='side right'>
-                <div className='inputWithButton'>
-                    <input type='text' />
-                    <ButtonG src={Search} alt="search"/>
+                <div className='search-bar'>
+                    <input className='input' type='text' placeholder='  Search for restaurant cuisine, chef'/>
+                    <ButtonG class='search-icon' src={Search} alt="search"/>
                 </div>
                     <ButtonG src={Shop} alt="search"/>
                     <ButtonG src={User} alt="search"/>

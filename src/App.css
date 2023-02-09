@@ -1,9 +1,19 @@
-/* @font-face {
-  font-family: "Helvetica Neue";
-  src: local("Helvetica-Neue"),
-    url("trickster-COLRv1.otf") format("opentype") tech(color-COLRv1), url("trickster-outline.otf")
-      format("opentype"), url("trickster-outline.woff") format("woff");
-} */
+@font-face {
+  font-family: "Helvetica Neue Bold";
+  src: url(./assets/font-epicure/Helvetica-Neu-Bold.ttf);
+}
+@font-face {
+  font-family: "Helvetica Neue Medium";
+  src: url(./assets/font-epicure/HelveticaNeue-Medium.ttf);
+}
+@font-face {
+  font-family: "Helvetica Neue Light";
+  src: url(./assets/font-epicure/HelveticaNeue-Light.ttf);
+}
+@font-face {
+  font-family: "Helvetica Neue Thin";
+  src: url(./assets/font-epicure/HelveticaNeue-Thin.ttf);
+}
 
 .header {
 }
