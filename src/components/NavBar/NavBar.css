@@ -4,7 +4,7 @@
     flex-direction: row;
     gap: 230px;
     width: 100%;
-    height: 10%;
+    height: 8%;
 }
 .side{
     margin: 15.5px 127px 16.5px 127px;
@@ -13,10 +13,6 @@
     display: flex;
     gap: 32px;
     margin-left:127px ;
-}
-.logo{
-    /* width: 10%;
-    height: 10%; */
 }
 .right{
     display: flex;
@@ -31,9 +27,6 @@
     height: 36px;
     border: 0.5px solid #000000;
     border-radius: 400px;
-}
-.search-bar:focus-within{
-    /* width: 100%; */
 }
 .input{
     font-family: 'Helvetica Neue Thin';

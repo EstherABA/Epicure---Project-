@@ -8,10 +8,12 @@ const Hero: React.FC = () => {
       return (
         <>
         <div className="hero-container">
-            <div className="hero-text-box">
-                Epicure works with the top
-                chef restaurants in Tel Aviv
-
+            <div className="description-box">
+                <div className="description">
+                    <span>Epicure works with the top</span>
+                    <span>chef restaurants in Tel Aviv</span>
+                </div>
+                
                 <div className="search-input">
                     <ButtonG src={Search} alt="search"/>
                     <input placeholder=" Search for restaurant cuisine, chef"/> 
