@@ -2,7 +2,7 @@
     "chefs":[
     {
       "id":1,
-      "name": "yosi",
+      "name": "Ran Shmueli",
       "portrait": "",
       "restaurants": [],
       "isChefOfTheWeek": false,
@@ -12,8 +12,8 @@
 
     },
     {
-      "id":1,
-      "name": "yosi",
+      "id":2,
+      "name": "Meir Adoni",
       "portrait": "",
       "restaurants": [],
       "isChefOfTheWeek": false,
@@ -21,8 +21,8 @@
       "viewCount": ""
     },
     {
-      "id":1,
-      "name": "yosi",
+      "id":3,
+      "name": "Yanir Green",
       "portrait": "",
       "restaurants": [],
       "isChefOfTheWeek": false,
@@ -33,32 +33,32 @@
     "restaurants":[
       {
         "id":1,
-        "name": "",
+        "name": "Claro",
         "image": "",
-        "chefId": "",
+        "chefId": "1",
         "hours": "",
         "address": "",
-        "rating": "",
+        "rating": "4",
         "dishes": [[], [], []]
       },
       {
-        "id":1,
-        "name": "",
+        "id":2,
+        "name": "Lumina",
         "image": "",
-        "chefId": "",
+        "chefId": "2",
         "hours": "",
         "address": "",
-        "rating": "",
+        "rating": "3",
         "dishes": [[], [], []]
       },      
       {
-        "id":1,
-        "name": "",
+        "id":3,
+        "name": "Tiger Lilly",
         "image": "",
-        "chefId": "",
+        "chefId": "3",
         "hours": "",
         "address": "",
-        "rating": "",
+        "rating": "4",
         "dishes": [[], [], []]
       }
    ],

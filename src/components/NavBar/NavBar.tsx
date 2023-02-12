@@ -22,8 +22,8 @@ const NavBar: React.FC = () => {
                     <input className='input' type='text' placeholder='  Search for restaurant cuisine, chef'/>
                     <ButtonG class='search-icon' src={Search} alt="search"/>
                 </div>
-                    <ButtonG src={Shop} alt="search"/>
                     <ButtonG src={User} alt="search"/>
+                    <ButtonG src={Shop} alt="search"/>
             </div>
         </div>
 
