@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import data from '../epicure.json';
+// import data from '../epicure.json';
 import HomePage from './components/Home Page/HomePage';
 
 const App: React.FC= () => {

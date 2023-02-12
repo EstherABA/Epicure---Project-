@@ -28,37 +28,51 @@
       "isChefOfTheWeek": false,
       "isNew": false,
       "viewCount": ""
-    },
+    }
    ],
     "restaurants":[
       {
         "id":1,
         "name": "Claro",
-        "image": "../../assets/images/claro.png",
-        "chefId": "1",
+        "image": "claro.png",
+        "chefId": "Ran Smuali",
         "hours": "",
         "address": "",
         "rating": "4",
+        "isPopular": true,
         "dishes": [[], [], []]
       },
       {
         "id":2,
         "name": "Lumina",
-        "image": "",
-        "chefId": "2",
+        "image": "Lumina.png",
+        "chefId": "Meir Adoni",
         "hours": "",
         "address": "",
         "rating": "3",
+        "isPopular": true,
         "dishes": [[], [], []]
       },      
       {
         "id":3,
         "name": "Tiger Lilly",
-        "image": "",
-        "chefId": "3",
+        "image": "tiger-lily.png",
+        "chefId": "Yanir Grin",
         "hours": "",
         "address": "",
         "rating": "4",
+        "isPopular": true,
+        "dishes": [[], [], []]
+      },
+      {
+        "id":4,
+        "name": "Lumina",
+        "image": "Lumina.png",
+        "chefId": "2",
+        "hours": "",
+        "address": "",
+        "rating": "3",
+        "isPopular": false,
         "dishes": [[], [], []]
       }
    ],

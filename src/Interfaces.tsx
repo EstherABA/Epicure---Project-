@@ -9,10 +9,10 @@ export interface IButtonProps{
 
 export interface IDivProps{
     class?: string,
-    restaurantImgSrc:string,
+    restaurantImgSrc?:string,
     restaurantImgAlt:string,
     restaurantName:string,
     chefName:string,
-    ratingSrc:number,
+    rating?:string,
 }
 

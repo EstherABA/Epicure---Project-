@@ -2,7 +2,7 @@ import React from 'react';
 import NavBar from '../NavBar/NavBar';
 import './HomePage.css'
 import Hero from '../Hero/Hero';
-import PopularRestaurant from '../Popular Restaurant/PopularRestaurant';
+import PopularRestaurant from '../Popular Restaurant/PopularContentBox/PopularRestaurant';
 
 const HomePage: React.FC= () => {
     return (
