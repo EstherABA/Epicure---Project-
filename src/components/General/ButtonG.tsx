@@ -1,15 +1,9 @@
 import React from 'react';
 import "./ButtonG.css";
+import {IButtonProps} from '../../Interfaces'
 
 
-interface Iprops{
-    name?:string,
-    src?: string,
-    alt?: string,
-    class?: string,
-}
-
-const ButtonG: React.FC<Iprops> = (props:Iprops) => {
+const ButtonG: React.FC<IButtonProps> = (props:IButtonProps) => {
       return (
             <button className= {`button  ${props.class}`}>
                   {props.name}

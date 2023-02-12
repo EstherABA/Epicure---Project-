@@ -1,8 +1,6 @@
 .button{
     all: unset;
     font-family: "Helvetica Neue Thin";
-    width: 10%;
-    height: 10%;
 }
 
 button:hover {

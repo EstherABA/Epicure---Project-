@@ -34,7 +34,7 @@
       {
         "id":1,
         "name": "Claro",
-        "image": "",
+        "image": "../../assets/images/claro.png",
         "chefId": "1",
         "hours": "",
         "address": "",

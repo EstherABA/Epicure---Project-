@@ -1,14 +1,15 @@
 import React from 'react';
 import NavBar from '../NavBar/NavBar';
 import './HomePage.css'
-import Hero from '../Hero/Hero'
+import Hero from '../Hero/Hero';
+import PopularRestaurant from '../Popular Restaurant/PopularRestaurant';
 
 const HomePage: React.FC= () => {
     return (
         <div>
             <NavBar />
             <Hero />
-            <div className='hero'></div>
+            <PopularRestaurant/>
             <div className='popular restaurant'></div>
             <div className='popular dish'></div>
         </div>
