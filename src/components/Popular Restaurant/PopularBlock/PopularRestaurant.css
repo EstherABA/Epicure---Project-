@@ -1,0 +1,26 @@
+.popular-res{
+    display: flex;
+    /* flex-direction: row; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    gap:10px;
+    width: 80%;
+    font-size: 25px;
+    /* text-align: center; */
+    margin-left: 200px;
+    /* height: 60%; */
+}
+
+.popular-text-container{
+    margin: 20px 0px 20px 0px;
+    font-size: 25px;
+    line-height: 35px;
+    text-align: center;
+    letter-spacing: 1.25px;
+}
+
+.all-restaurant-btn{
+    object-position: right;
+    margin-left: 1132px;
+    margin-top: 10px;
+}

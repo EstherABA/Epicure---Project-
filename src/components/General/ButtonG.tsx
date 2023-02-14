@@ -6,8 +6,8 @@ import {IButtonProps} from '../../Interfaces'
 const ButtonG: React.FC<IButtonProps> = (props:IButtonProps) => {
       return (
             <button className= {`button  ${props.class}`}>
-                  {props.name}
-                  <img src={props.src} alt={props.alt}/> 
+                  {props.title}
+                  <img className={props.imgClass} src={props.src} alt={props.alt}/> 
             </button>
       )
 }

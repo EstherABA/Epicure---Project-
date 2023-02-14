@@ -13,8 +13,8 @@ const NavBar: React.FC = () => {
         <div className='nav-bar'> 
             <div className='side left'>
                 <ButtonG  class='logo' src={logoEpicure} alt="logo"/>
-                <ButtonG  name="Restaurants"/>
-                <ButtonG  name="Chefs" />
+                <ButtonG  title='Restaurants' />
+                <ButtonG  title='Chefs' />
             </div>
 
             <div className='side right'>

@@ -11,8 +11,8 @@ const RestaurantCard: React.FC<IDivProps> = (props:IDivProps) => {
                   <img className= "restaurant-image" src={props.restaurantImgSrc} alt={props.restaurantImgAlt}/>
                   <div className='all-res-data'>
                         <div className='name-restaurant'>{props.restaurantName}</div>
-                        <div className='chef-restaurant'>{props.chefName}</div>
-                        <img  src={props.rating}  />
+                        <div className='chef-name'>{props.chefName}</div>
+                        <img  className='star-img' src={props.rating}  />
                   </div>
             </div>
       )

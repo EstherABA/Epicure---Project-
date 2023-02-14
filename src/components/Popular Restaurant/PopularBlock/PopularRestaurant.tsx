@@ -11,12 +11,12 @@ const PopularRestaurant: React.FC = () => {
   const items = data.restaurants.map((item:any) => {
     if (item.isPopular === true) {
       return <RestaurantCard 
-      restaurantImgSrc={require(`../../../assets/images/${item.image}`)} 
-      restaurantName={item.name} 
-      restaurantImgAlt={item.name}  
-      chefName={item.chefId} 
-      rating={require(`../../../assets/icon/star${item.rating}.svg`)}
-     />
+        restaurantImgSrc={require(`../../../assets/images/${item.image}`)} 
+        restaurantName={item.name} 
+        restaurantImgAlt={item.name}  
+        chefName={item.chefId} 
+        rating={require(`../../../assets/icon/star${item.rating}.svg`)}
+      />
     }
       return null;
   }
@@ -29,7 +29,7 @@ const PopularRestaurant: React.FC = () => {
       <div className='popular-res'>
         {items}
       </div>
-      {/* <ButtonG name= "All restaurants" src=''/> */}
+      <ButtonG  class='all-restaurant-btn' src={require(`../../../assets/AllRestaurant.svg`).default}/>
     </>
   )
 

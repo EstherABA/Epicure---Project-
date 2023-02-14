@@ -6,8 +6,8 @@
     background: url("../../assets/images/hero-picture.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    width: 100vw;
-    height: 80vh;
+    width: 98vw;
+    height: 77vh;
 }
 .description-box{
     display: flex;
