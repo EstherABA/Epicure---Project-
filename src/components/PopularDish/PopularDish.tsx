@@ -21,6 +21,7 @@ const PopularDish = () => {
         name={dish.name} 
         ingredients={dish.ingredients}
         currency = {require('../../assets/icon/ils.svg').default}
+        price = {dish.price}
       />
     }
     // dish.isSpicy === true ?  <HomeCard moreInfoSrc={require('../../assets/icon/spicy.png')}/> : null ;
@@ -32,9 +33,9 @@ const PopularDish = () => {
 
     return ( 
       <>
-        <div className='popular-text-container'>SIGNATURE DISH OF: </div>
-        <div className='popular-dish-container'>
-        {dishes}
+        <div className='popular-title-container'>SIGNATURE DISH OF: </div>
+        <div className='popular-container'>
+          {dishes}
         </div>
       </> 
     );

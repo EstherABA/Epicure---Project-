@@ -26,8 +26,8 @@ const PopularRestaurant: React.FC = () => {
 
   return (
     <>
-      <div className='popular-text-container'>POPULAR RESTAURANT IN EPICURE:</div>
-      <div className='popular-dish-container'>
+      <div className='popular-title-container'>POPULAR RESTAURANT IN EPICURE:</div>
+      <div className='popular-container'>
         {items}
       </div>
       <ButtonG  class='all-restaurant-btn' src={require(`../../assets/AllRestaurant.svg`).default}/>

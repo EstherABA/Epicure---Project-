@@ -5,6 +5,7 @@ export interface IButtonProps{
     src?: string,
     alt?: string,
     class?: string
+    
 }
 
 export interface IDivProps{
