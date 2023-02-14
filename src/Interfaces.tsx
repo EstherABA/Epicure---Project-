@@ -4,16 +4,19 @@ export interface IButtonProps{
     title?:string,
     src?: string,
     alt?: string,
-    class?: string,
-    imgClass?: string
+    class?: string
 }
 
 export interface IDivProps{
     class?: string,
-    restaurantImgSrc?:string,
-    restaurantImgAlt?:string,
-    restaurantName?:string,
+    ImgSrc?:string,
+    ImgAlt?:string,
+    name?:string,
     chefName?:string,
-    rating?:string,
+    moreInfoSrc?:string,
+    moreInfoAlt?: string,
+    ingredients?: string,
+    currency?: string,
+    price?: number
 }
 

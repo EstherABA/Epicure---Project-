@@ -1,6 +1,6 @@
 import React from 'react';
 import './NavBar.css'
-import ButtonG from '../General/ButtonG'
+import ButtonG from '../General/ButtonGeneral/ButtonG'
 import logoEpicure from '../../assets/logoEpicure.svg'
 import Search from '../../assets/icon/Search.svg'
 import Shop from '../../assets/icon/Shop.svg'
@@ -22,8 +22,8 @@ const NavBar: React.FC = () => {
                     <input className='input' type='text' placeholder='  Search for restaurant cuisine, chef'/>
                     <ButtonG class='search-icon' src={Search} alt="search"/>
                 </div>
-                    <ButtonG src={User} alt="search"/>
-                    <ButtonG src={Shop} alt="search"/>
+                    <ButtonG src={User} alt="user"/>
+                    <ButtonG src={Shop} alt="shop"/>
             </div>
         </div>
 

@@ -2,7 +2,8 @@ import React from 'react';
 import NavBar from '../NavBar/NavBar';
 import './HomePage.css'
 import Hero from '../Hero/Hero';
-import PopularRestaurant from '../Popular Restaurant/PopularBlock/PopularRestaurant';
+import PopularRestaurant from '../Popular Restaurant/PopularRestaurant'
+import PopularDish from '../PopularDish/PopularDish';
 
 const HomePage: React.FC= () => {
     return (
@@ -10,7 +11,7 @@ const HomePage: React.FC= () => {
             <NavBar />
             <Hero />
             <PopularRestaurant/>
-            <div className='popular restaurant'></div>
+            <PopularDish />
             <div className='popular dish'></div>
         </div>
 
