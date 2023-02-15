@@ -3,7 +3,7 @@ import './App.css';
 // import data from '../epicure.json';
 import HomePage from './components/Home Page/HomePage';
 import {BrowserRouter, Route, Routes} from "react-router-dom"
-import RestaurantPage from './components/RestaurantsPage/ResturantsPage';
+import RestaurantPage from './components/RestaurantsPage/RestaurantsPage';
 import ChefsPage from './components/ChefsPage/ChefsPage';
 
 const App: React.FC= () => {
