@@ -14,10 +14,17 @@ export interface IDivProps{
     ImgAlt?:string,
     name?:string,
     chefName?:string,
-    moreInfoSrc?:string,
+    moreInfoSrc?:string ,
     moreInfoAlt?: string,
     ingredients?: string,
     currency?: string,
     price?: number
+}
+
+export interface IProperties {
+    spicy?: boolean,
+    vegan?: boolean,
+    vegetarian?: boolean,
+
 }
 
