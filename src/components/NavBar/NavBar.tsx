@@ -5,16 +5,18 @@ import logoEpicure from '../../assets/logoEpicure.svg'
 import Search from '../../assets/icon/Search.svg'
 import Shop from '../../assets/icon/Shop.svg'
 import User from '../../assets/icon/User.svg'
+import { useNavigate } from 'react-router-dom';
 
 
 const NavBar: React.FC = () => {
+    // const navigate = useNavigate();
     return (
 
         <div className='nav-bar'> 
             <div className='side left'>
-                <ButtonG  class='logo' src={logoEpicure} alt="logo"/>
+                <ButtonG  class='logo' src={logoEpicure} alt="logo" />
                 <ButtonG  title='Restaurants' />
-                <ButtonG  title='Chefs' />
+                <ButtonG  title='Chefs'  />
             </div>
 
             <div className='side right'>

@@ -28,3 +28,11 @@ export interface IProperties {
 
 }
 
+export interface IChefPortrait {
+    src: string,
+    alt: string,
+    name: string,
+    description?: string,
+
+}
+

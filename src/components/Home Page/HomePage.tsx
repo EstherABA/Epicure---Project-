@@ -5,6 +5,7 @@ import Hero from '../Hero/Hero';
 import PopularRestaurant from '../Popular Restaurant/PopularRestaurant'
 import PopularDish from '../PopularDish/PopularDish';
 import MeaningOfIcon from '../Meaning of icon/MeaningOfIcon';
+import ChefOfWeek from '../ChefOfWeek/ChefOfWeek'
 
 const HomePage: React.FC= () => {
     return (
@@ -14,6 +15,7 @@ const HomePage: React.FC= () => {
             <PopularRestaurant />
             <PopularDish />
             < MeaningOfIcon />
+            <ChefOfWeek />
         </div>
 
     )

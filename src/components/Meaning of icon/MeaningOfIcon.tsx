@@ -4,7 +4,7 @@ import vegetarian from '../../assets/icon/vegetarian.svg'
 import vegan from '../../assets/icon/vegan.svg'
 import './MeaningOfIcon.css'
 
-const  MeaningOfIcon= () => {
+const MeaningOfIcon: React.FC = () => {
     return (  
         <>
     <div className='icon-container'>

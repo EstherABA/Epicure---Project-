@@ -5,7 +5,7 @@ import './PopularDish.css'
 import spicy from '../../assets/icon/spicy.svg'
 import React, { useState } from 'react'
 
-const PopularDish = () => {
+const PopularDish: React.FC = () => {
   // const [spicy,setState] = useState(true); 
 
     
