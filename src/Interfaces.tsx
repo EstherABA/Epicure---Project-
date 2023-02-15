@@ -4,8 +4,8 @@ export interface IButtonProps{
     title?:string,
     src?: string,
     alt?: string,
-    class?: string
-    
+    class?: string,
+    onClick?: React.MouseEventHandler<HTMLButtonElement>,
 }
 
 export interface IDivProps{

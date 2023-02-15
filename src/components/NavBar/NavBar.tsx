@@ -9,14 +9,14 @@ import { useNavigate } from 'react-router-dom';
 
 
 const NavBar: React.FC = () => {
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
     return (
 
         <div className='nav-bar'> 
             <div className='side left'>
-                <ButtonG  class='logo' src={logoEpicure} alt="logo" />
-                <ButtonG  title='Restaurants' />
-                <ButtonG  title='Chefs'  />
+                <ButtonG  class='logo' src={logoEpicure} alt="logo" onClick={()=> navigate("/")}/>
+                <ButtonG  title='Restaurants' onClick={()=> navigate("/restaurants")}/>
+                <ButtonG  title='Chefs' onClick={()=> navigate("/chefs")} />
             </div>
 
             <div className='side right'>
