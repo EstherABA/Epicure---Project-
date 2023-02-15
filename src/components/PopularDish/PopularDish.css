@@ -1,7 +1,6 @@
 .dishP-card{
     width: 20%;
     font-size: 20px;
-    /* align-items: center; */
     background-color: #F9F4EA;
     height:470px;
 }
@@ -26,9 +25,7 @@
 
 .ingredients{
     width: 70%;
-    /* margin-left: 50px; */
     height: 100%;
-    /* margin-bottom: 50px; */
     margin-top: 30px;
     text-align: center;
 }
