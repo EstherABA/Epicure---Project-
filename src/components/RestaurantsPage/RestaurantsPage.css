@@ -1,0 +1,15 @@
+.restaurants-container{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    height: 50%;
+    
+}
+
+.one-restaurant{
+    display: flex;
+    /* flex-direction: row; */
+    width: 100px;
+    /* height: 50%; */
+    
+}

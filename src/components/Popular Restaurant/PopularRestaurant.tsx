@@ -12,7 +12,7 @@ const PopularRestaurant: React.FC = () => {
     if (item.isPopular === true) {
       return <HomeCard 
         class='restaurantP-card'
-        ImgSrc={require(`../../assets/images/${item.image}`)} 
+        ImgSrc={require(`../../${item.image}`)} 
         name={item.name} 
         ImgAlt={item.name}  
         chefName={item.chefId} 

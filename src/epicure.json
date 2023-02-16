@@ -47,7 +47,7 @@
       {
         "id":1,
         "name": "Claro",
-        "image": "claro.png",
+        "image": "assets/images/claro.png",
         "chefName": "Ran Smuali",
         "hours": "",
         "address": "",
@@ -58,7 +58,7 @@
       {
         "id":2,
         "name": "Lumina",
-        "image": "Lumina.png",
+        "image": "assets/images/Lumina.png",
         "chefName": "Meir Adoni",
         "hours": "",
         "address": "",
@@ -69,7 +69,7 @@
       {
         "id":3,
         "name": "Tiger Lilly",
-        "image": "tiger-lily.png",
+        "image": "assets/images/tiger-lily.png",
         "chefName": "Yanir Grin",
         "hours": "",
         "address": "",
