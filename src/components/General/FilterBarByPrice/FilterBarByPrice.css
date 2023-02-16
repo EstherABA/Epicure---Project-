@@ -1,0 +1,15 @@
+.filter-bar-Price{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:30px;
+    margin-top: 40px;
+    background: #FAFAFA;
+    height: 80px;
+}
+.filter-bar-Price-btn{
+    padding: 15px;
+}
+.filter-bar-Price-btn:hover{
+    background: #afafaf;
+}

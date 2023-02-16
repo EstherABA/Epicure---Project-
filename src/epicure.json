@@ -121,9 +121,7 @@
         "restaurant": "Claro",
         "ingredients": "Shrimps, Glass Noodles, Kemiri Nuts, Shallots, Lemon Grass, Magic Chili Brown Coconut",
         "isSignatureDish": true,
-        "properties": { "spicy":true ,
-                        "vegan": false,
-                        "vegetarian":false },
+        "properties": ["spicy"],
         "optionalSides": ["White bread","Stick rice"],
         "optionalChanges": ["Without peanuts", "Sticky Less spicy"]
       },
