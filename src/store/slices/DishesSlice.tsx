@@ -1,14 +1,14 @@
 import {createSlice} from "@reduxjs/toolkit"
 import data from '../../epicure.json'
 
-export const chefsSlice = createSlice({
-    name: "chefs",
+export const DishesSlice = createSlice({
+    name: "Dishes",
     initialState: {
-        value: data.chefs
+        value: data.dishes
     },
     reducers: {
 
     }
 });
 
-export default chefsSlice.reducer;
+export default DishesSlice.reducer;
