@@ -5,20 +5,20 @@ import NavBar from '../NavBar/NavBar';
 import FilterBarByNew from '../General/FilterBarByNew/FIlterBarByNew';
 import FilterBarByPrice from '../General/FilterBarByPrice/FilterBarByPrice'
 import {useSelector} from "react-redux";
-import './RestaurantsPage'
+import './RestaurantsPage.css'
 
 const RestaurantsPage: React.FC= () => {
-    const x = useSelector(
+    const AllRestaurants = useSelector(
         (state:any) => state.restaurants.value
     );
 
-    const y = x.map((restaurant:any ) =>{
+    const restaurantsCards = AllRestaurants.map((restaurant:any) =>{
         return <HomeCard 
         class='one-restaurant'
         ImgSrc={require(`../../${restaurant.image}`)} 
-        name={restaurant.name} 
         ImgAlt={restaurant.name}  
-        // chefName={restaurant.chefName} 
+        name={restaurant.name} 
+        chefName={restaurant.chefName} 
         moreInfoSrc={require(`../../assets/icon/star${restaurant.rating}.svg`)}
       />
 
@@ -34,7 +34,7 @@ const RestaurantsPage: React.FC= () => {
             <FilterBarByNew />
             <FilterBarByPrice />
             <div className='restaurants-container'>
-                {y}
+                {restaurantsCards}
 
             </div>
             

@@ -10,11 +10,11 @@ const RestaurantCard: React.FC<IDivProps> = (props:IDivProps) => {
                   <img className= "card-image" src={props.ImgSrc} alt={props.ImgAlt}/>
                         
                   <div className='name-'>{props.name}</div>
-                  <div className='chef-name'>{props.chefName}</div>
+                  <div>{props.chefName}</div>
                   <img className='star-img' src={props.moreInfoSrc} alt={props.moreInfoAlt} />
                   <div className='ingredients'> {props.ingredients}</div>
                   <div className='price'> 
-                        <img src={props.currency}/>
+                  <img src={props.currency}/>
                         {props.price}
                   </div>
                         

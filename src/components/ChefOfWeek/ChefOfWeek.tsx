@@ -15,13 +15,14 @@ const ChefOfWeek: React.FC = () => {
                     src={require(`../../${chef.portrait}`)} 
                     alt={`${chef.name}`} 
                     name={`${chef.name}`} 
+                    // chefClass = {chef-name}
                     description={`${chef.description}`} 
                     />
 
                 <p className=' title-of-the-week'>{`${chef.name} Restaurants:` } </p>
                 <div className='chef-restaurants'>
                     { 
-                        chef.restaurants.map((restaurant)=> <HomeCard ImgSrc={require(`../../${data.restaurants[3].image}`)} ImgAlt={restaurant} name={restaurant} />)
+                        chef.restaurants.map((restaurant)=> <HomeCard ImgSrc={require(`../../${data.restaurants[6].image}`)} ImgAlt={restaurant} name={restaurant} />)
                     }
                 </div>
             </div>) : (<></>)
