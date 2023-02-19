@@ -2,6 +2,7 @@ import React from 'react';
 import NavBar from '../NavBar/NavBar';
 import ChefPortraitCard from '../General/ChefPortraitCard/ChefPortraitCard';
 import FilterBarByNew from '../General/FilterBarByNew/FIlterBarByNew';
+import Footer from '../General/Footer/Footer';
 import {useSelector} from "react-redux";
 import { RootState } from '../../store/Store';
 import './ChefsPage.css'
@@ -41,6 +42,7 @@ const ChefsPage: React.FC = () => {
             <div className='all-chefs'>
                 {chefsCards}
             </div>
+        <Footer />
         </div> 
     );
 }
