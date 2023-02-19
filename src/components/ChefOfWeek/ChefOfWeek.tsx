@@ -2,8 +2,8 @@ import React from 'react';
 import HomeCard from '../General/HomeCard/HomeCard';
 import './ChefOfWeek.css';
 import ChefPortraitCard from '../General/ChefPortraitCard/ChefPortraitCard';
-import data from '../../epicure.json'
-import { forEachChild } from 'typescript';
+import data from '../../epicure.json';
+import { Chef } from '../ChefsPage/ChefsPage'; 
 
 const ChefOfWeek: React.FC = () => {
     const chefs = data.chefs.map((chef:any) => { 
@@ -22,9 +22,9 @@ const ChefOfWeek: React.FC = () => {
                         chef.restaurants.map((restaurant:any)=> <HomeCard ImgSrc={require(`../../${data.restaurants[6].image}`)} ImgAlt={restaurant} name={restaurant} />)
                     }
                 </div>
-            </div>) : ( null)
-        )
-    });
+            </div>) : (null)) });
+                                
+           
 
     return (  
         <div>

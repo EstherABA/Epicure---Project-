@@ -3,7 +3,7 @@
     flex-direction: row;
     justify-content: center;
 }
-.chef-img-box{
+.chef-img-name-box{
     display: flex;
     flex-direction: column;
     position: relative;

@@ -6,7 +6,7 @@ import { IChefPortrait } from '../../../Interfaces';
 const ChefPortraitCard: React.FC <IChefPortrait> = (props:IChefPortrait ) => {
     return ( 
         <div className='chef-container'>
-            <div className='chef-img-box'>
+            <div className='chef-img-name-box'>
             <img className='chef-img' src={props.src} alt={props.alt} />
             <p className='chef-name'> {props.name}</p>
             </div>
