@@ -22,13 +22,7 @@ const RestaurantsPage: React.FC= () => {
         chefName={restaurant.chefName} 
         moreInfoSrc={require(`../../assets/icon/star${restaurant.rating}.svg`)}
       />
-
     })
-    
-
-    
-   
-
     return (
         <div>
             <NavBar />
@@ -38,11 +32,7 @@ const RestaurantsPage: React.FC= () => {
                 {restaurantsCards}
             </div>
             <Footer />
-            
-
         </div>
-
     )
 }
-
 export default RestaurantsPage;

@@ -1,7 +1,6 @@
 .chef-restaurants{
     display: flex;
     flex-direction: row;
-    /* justify-content: center; */
     align-items: center;
     gap:40px;
     background-color: #F9F4EA;
