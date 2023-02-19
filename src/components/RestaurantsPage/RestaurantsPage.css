@@ -5,18 +5,12 @@
     gap: 20px 40px;
     justify-content: center;
     margin-top: 70px;
-    /* flex-direction: row; */
-    /* width: 40%; */
-    /* height: 900px;  */
-    
 }
 
 .one-restaurant{
-    /* display: grid; */
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* width: 100%; */
+    gap:10px ;
     height: 90%;
     background-color: #F9F4EA;
+    font-size: 22px;
 }
     

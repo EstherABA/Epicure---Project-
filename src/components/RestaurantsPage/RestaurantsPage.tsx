@@ -6,6 +6,7 @@ import FilterBarByNew from '../General/FilterBarByNew/FIlterBarByNew';
 import FilterBarByPrice from '../General/FilterBarByPrice/FilterBarByPrice'
 import {useSelector} from "react-redux";
 import './RestaurantsPage.css'
+import Footer from '../General/Footer/Footer';
 
 const RestaurantsPage: React.FC= () => {
     const AllRestaurants = useSelector(
@@ -35,8 +36,8 @@ const RestaurantsPage: React.FC= () => {
             <FilterBarByPrice />
             <div className='restaurants-container'>
                 {restaurantsCards}
-
             </div>
+            <Footer />
             
 
         </div>
