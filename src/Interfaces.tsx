@@ -1,4 +1,5 @@
 import React from 'react';
+import { RestaurantsState}  from './components/RestaurantsPage/RestaurantsPage'
 
 export interface IButtonProps{
     title?:string,
@@ -36,3 +37,7 @@ export interface IChefPortrait {
 
 }
 
+export interface RootState {
+    restaurants: RestaurantsState;
+    // counter: CounterState;
+  }
