@@ -5,17 +5,8 @@ import spicy from '../../assets/icon/spicy.svg'
 import React, { useState } from 'react'
 
 const PopularDish: React.FC = () => {
- const x = data.dishes.map((dish)=>{
-        
-      // moreInfoSrc = {require(`../../assets/icon/${dish.properties}.svg`)}
-
-        })
-    
   const dishes = data.dishes.map((dish) => { 
-    
-     
-    
-    if (dish.isSignatureDish === true) {
+    if (dish.isSignatureDish) {
       return <HomeCard
       class='dishP-card' 
       ImgSrc={require(`../../${dish.image}`)}
@@ -24,12 +15,8 @@ const PopularDish: React.FC = () => {
       ingredients={dish.ingredients}
       currency = {require('../../assets/icon/ils.svg').default}
       price = {dish.price}
-     
-
-        
       />
     }
-    // moreInfoSrc = {dish.properties!.spicy === spicy ? require('../../assets/icon/spicy.svg').default : ''}
   });
 
   return ( 
@@ -37,7 +24,6 @@ const PopularDish: React.FC = () => {
       <div className='popular-title-container'>SIGNATURE DISH OF: </div>
       <div className='popular-container'>
         {dishes}
-        
       </div>
     </> 
   );

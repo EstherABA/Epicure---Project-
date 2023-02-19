@@ -7,15 +7,14 @@ import distance from '../../../assets/icon/distance.svg';
 
 
 const FilterBarByPrice: React.FC = () => {
+    const arrFIlterBar = ["priceRating" ,"rating", "distance"]
+    let maps = arrFIlterBar.map((singleFilter:string) => {
+       return <ButtonG class='filter-bar-price-btn' src={require(`../../../assets/icon/${singleFilter}.svg`)}/>
+    } )
     return ( 
-        <div className='filter-bar-Price'>
-            <ButtonG class='filter-bar-Price-btn' src={priceRating}/>
-            <ButtonG class='filter-bar-Price-btn' src={rating}/>
-            <ButtonG class='filter-bar-Price-btn' src={distance}/>
-          
+        <div className='filter-bar-price'>
+                {maps}
         </div>
-
      );
 }
- 
 export default FilterBarByPrice;

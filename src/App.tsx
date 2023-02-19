@@ -14,11 +14,7 @@ const App: React.FC= () => {
         <Route path="/restaurants" element={<RestaurantPage />} />
         <Route path="/chefs" element={<ChefsPage />} />
       </Routes>
-    
-    
     </BrowserRouter>
-   
   )
 }
-
 export default App;

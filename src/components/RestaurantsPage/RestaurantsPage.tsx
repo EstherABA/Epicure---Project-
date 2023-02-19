@@ -1,24 +1,24 @@
 import React from 'react';
 import data from '../../epicure.json';
+import './RestaurantsPage.css'
 import HomeCard from '../General/HomeCard/HomeCard';
 import NavBar from '../NavBar/NavBar';
 import FilterBarByNew from '../General/FilterBarByNew/FIlterBarByNew';
 import FilterBarByPrice from '../General/FilterBarByPrice/FilterBarByPrice'
-import {useSelector} from "react-redux";
-import './RestaurantsPage.css'
 import Footer from '../General/Footer/Footer';
-import { RootState } from '../../Interfaces';
+import {useSelector} from "react-redux";
+import { RootState } from '../../store/Store';
 
 export interface Restaurant {
     id:number,
-    name: string,
-    image: string,
+    name:string,
+    image:string,
     chefName:string,
     hours:any,
-    address:string,
+    address:string ,
     rating: string,
     isPopular: boolean,
-    dishes: Array<string>
+    dishes:Array<string>
   }
   export interface RestaurantsState {
     value: Restaurant[];
@@ -39,11 +39,6 @@ const RestaurantsPage: React.FC= () => {
         moreInfoSrc={require(`../../assets/icon/star${restaurant.rating}.svg`)}
       />
     })
-    
-
-    
-   
-
     return (
         <div>
             <NavBar />
@@ -53,11 +48,7 @@ const RestaurantsPage: React.FC= () => {
                 {restaurantsCards}
             </div>
             <Footer />
-            
-
         </div>
-
     )
 }
-
 export default RestaurantsPage;
