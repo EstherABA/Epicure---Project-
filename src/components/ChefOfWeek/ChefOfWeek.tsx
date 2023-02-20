@@ -3,10 +3,16 @@ import HomeCard from '../General/HomeCard/HomeCard';
 import './ChefOfWeek.css';
 import ChefPortraitCard from '../General/ChefPortraitCard/ChefPortraitCard';
 import data from '../../epicure.json';
-import { Chef } from '../ChefsPage/ChefsPage'; 
+import { Chef, RootState } from '../../Interfaces'; 
+import { useSelector } from 'react-redux';
+
+
 
 const ChefOfWeek: React.FC = () => {
-    const chefs = data.chefs.map((chef:any) => { 
+    const allChefs = useSelector(
+        (state:RootState) => state.chefs.value
+    );
+    const chefs = allChefs.map((chef:Chef) => { 
         return ( 
            chef.isChefOfTheWeek ? (
             <div className='chefs-data-container'>

@@ -103,6 +103,10 @@
         "address": "",
         "rating": "4",
         "isPopular": true,
+        "isNew": false,
+        "mostPopular": true,
+        "openHour": 8,
+        "closeHour": 20,
         "dishes": [[], [], []]
       },
       {
@@ -114,6 +118,10 @@
         "address": "",
         "rating": "3",
         "isPopular": true,
+        "isNew": true,
+        "mostPopular": false,
+        "openHour": 16,
+        "closeHour": 20,
         "dishes": [[], [], []]
       },      
       {
@@ -125,6 +133,10 @@
         "address": "",
         "rating": "4",
         "isPopular": true,
+        "isNew": true,
+        "mostPopular": false,
+        "openHour": 14,
+        "closeHour": 21,
         "dishes": [[], [], []]
       },
       {
@@ -136,6 +148,10 @@
         "address": "",
         "rating": "1",
         "isPopular": false,
+        "isNew": false,
+        "mostPopular": false,
+        "openHour": 8,
+        "closeHour": 20,
         "dishes": [[], [], []]
       },
       {
@@ -147,6 +163,10 @@
         "address": "",
         "rating": "1",
         "isPopular": false,
+        "isNew": true,
+        "mostPopular": false,
+        "openHour": 8,
+        "closeHour": 20,
         "dishes": [[], [], []]
       },
       {
@@ -158,6 +178,10 @@
         "address": "",
         "rating": "3",
         "isPopular": false,
+        "isNew": true,
+        "mostPopular": false,
+        "openHour": 8,
+        "closeHour": 20,
         "dishes": [[], [], []]
       },
       {
@@ -169,6 +193,10 @@
         "address": "",
         "rating": "3",
         "isPopular": false,
+        "isNew": false,
+        "mostPopular": true,
+        "openHour": 11,
+        "closeHour": 20,
         "dishes": [[], [], []]
       },
       {
@@ -180,6 +208,10 @@
         "address": "",
         "rating": "3",
         "isPopular": false,
+        "isNew": true,
+        "mostPopular": false,
+        "openHour": 18,
+        "closeHour": 20,
         "dishes": [[], [], []]
       },
       {
@@ -191,6 +223,10 @@
         "address": "",
         "rating": "3",
         "isPopular": false,
+        "isNew": false,
+        "mostPopular": true,
+        "openHour": 16,
+        "closeHour": 20,
         "dishes": [[], [], []]
       }
    ],

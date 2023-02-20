@@ -5,22 +5,10 @@ import FilterBarByNew from '../General/FilterBarByNew/FIlterBarByNew';
 import Footer from '../General/Footer/Footer';
 import {useSelector} from "react-redux";
 import { RootState } from '../../store/Store';
+import { Chef } from '../../Interfaces';
 import './ChefsPage.css'
 
-export interface Chef {
-    id:number,
-    name:string,
-    portrait: string,
-    restaurants: Array<string>,
-    isChefOfTheWeek:boolean, 
-    description: string,
-    isNew: boolean,
-    viewCount: number,
-    mostViewed: boolean,
-  }
-  export interface ChefsState {
-    value: Chef[];
-  }
+
 
 const ChefsPage: React.FC = () => {
     const AllChefs = useSelector(
