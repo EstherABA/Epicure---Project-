@@ -42,22 +42,5 @@ export const RestaurantsSlice = createSlice({
         }
         });
 
-
-            // const sort = state.value.map((restau)=> {
-            //     if(`restau.${action}`){
-            //         return <HomeCard 
-            //             class='one-restau'
-            //             ImgSrc={require(`../../${restau.image}`)} 
-            //             ImgAlt={restau.name}  
-            //             name={restau.name} 
-            //             chefName={restau.chefName} 
-            //             moreInfoSrc={require(`../../assets/icon/star${restau.rating}.svg`)}
-            //         />
-            //     }
-        //     })
-        //     state.value = sort;
-        //   },
-    
-
 export const {filterRestaurants} = RestaurantsSlice.actions;
 export default RestaurantsSlice.reducer;

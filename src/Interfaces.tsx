@@ -1,5 +1,4 @@
 import React from 'react';
-// import { RestaurantsState}  from './components/RestaurantsPage/RestaurantsPage'
 
 export interface IButtonProps{
     title?:string,
@@ -9,7 +8,7 @@ export interface IButtonProps{
     onClick?: React.MouseEventHandler<HTMLButtonElement>,
 }
 
-export interface IDivProps{
+export interface IHomeCard{
     class?: string,
     ImgSrc?:string,
     ImgAlt?:string,
@@ -19,10 +18,11 @@ export interface IDivProps{
     moreInfoAlt?: string,
     ingredients?: string,
     currency?: string,
-    price?: number
+    price?: number,
+    onClick?: React.MouseEventHandler<HTMLButtonElement>
 }
 
-export interface IProperties {
+export interface IProperties{
     spicy?: boolean,
     vegan?: boolean,
     vegetarian?: boolean,
