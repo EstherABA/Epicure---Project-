@@ -3,8 +3,7 @@ import {ICard} from '../../../Interfaces';
 import "./CardGeneral.css";
 
 
-const RestaurantCard: React.FC<ICard> = (props:ICard) => {
-      
+const CardGeneral: React.FC<ICard> = (props:ICard) => {
       return (
             <button className= {`card ${props.class}`} onClick={props.onClick}>
                   <img className= "card-image" src={props.ImgSrc} alt={props.ImgAlt}/>
@@ -22,4 +21,4 @@ const RestaurantCard: React.FC<ICard> = (props:ICard) => {
       )
 }
 
-export default RestaurantCard;
+export default CardGeneral;

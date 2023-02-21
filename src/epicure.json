@@ -114,6 +114,7 @@
         "id":2,
         "name": "Lumina",
         "image": "assets/images/Lumina.png",
+        "imageHero": "assets/images/claroHero.png",
         "chefName": "Meir Adoni",
         "hours": "",
         "address": "",
@@ -153,7 +154,7 @@
         "mostPopular": false,
         "openHour": 8,
         "closeHour": 20,
-        "dishes": []
+        "dishes": [1,5]
       },
       {
         "id":8,
@@ -168,7 +169,7 @@
         "mostPopular": false,
         "openHour": 8,
         "closeHour": 20,
-        "dishes": [[], [], []]
+        "dishes": [4,3]
       },
       {
         "id":9,
@@ -183,7 +184,7 @@
         "mostPopular": false,
         "openHour": 8,
         "closeHour": 20,
-        "dishes": [[], [], []]
+        "dishes": [1,2,4]
       },
       {
         "id":4,
@@ -198,7 +199,7 @@
         "mostPopular": true,
         "openHour": 11,
         "closeHour": 20,
-        "dishes": [[], [], []]
+        "dishes": [1,3]
       },
       {
         "id":5,

@@ -11,31 +11,30 @@ import NavBar from '../NavBar/NavBar';
 
 
 const SingleRestaurant: React.FC = () => {
-    const specificIdForRest = useParams()
-    const arrOfDishesOfRest: Array<Dish> = []
-    
+    const specificIdForRest = useParams();
+    let arrOfDishesOfRest: Array<Dish> = [];
+
     const allRestaurants = useSelector(
         (state:RootState) => state.restaurants.value
-    );
-
-    const allDishes = useSelector(
-        (state:RootState) => state.dishes.value
-    );
-
-    const mapRestaurants = allRestaurants.filter((restaurant:Restaurant) =>{
-        const mapDishes = restaurant.dishes.map((dishIdFromArrInRest:number) =>{
-            allDishes.filter((dishObject:Dish)=> {
-                if(dishObject.id === dishIdFromArrInRest) {
-                    arrOfDishesOfRest.push(dishObject)
-                }
-            })
-            return arrOfDishesOfRest
-        })
-        console.log( mapDishes, "map dishes of restaurant");
-        console.log( arrOfDishesOfRest , "all dish id in rest object");
+        );
         
-        return restaurant.id === Number(specificIdForRest.id)
-    })[0];
+        const allDishes = useSelector(
+            (state:RootState) => state.dishes.value
+        );
+            
+        const mapRestaurants = allRestaurants.filter((restaurant:Restaurant) =>{
+            
+            return restaurant.id === Number(specificIdForRest.id)
+        })[0];
+        
+        mapRestaurants.dishes.map((dishIdFromArrInRest:number) =>{
+            allDishes.filter((dishObject:Dish)=> {
+            if(dishObject.id === dishIdFromArrInRest) {
+                arrOfDishesOfRest.push(dishObject)
+                }
+            });
+        })
+        console.log(arrOfDishesOfRest, "ccc");
 
     const date = new Date();
     const showTime = date.getHours();
@@ -45,6 +44,9 @@ const SingleRestaurant: React.FC = () => {
             return <span> <img src={Clock}/> Open Now</span>
         }
         else{return <span>it's Close</span>}}
+
+        console.log(mapRestaurants);
+        
   
     return (
         <>

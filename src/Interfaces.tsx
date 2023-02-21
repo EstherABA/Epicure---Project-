@@ -44,7 +44,7 @@ export interface Restaurant {
     id:number,
     name:string,
     image:string,
-    imageHero:string,
+    imageHero?:string,
     chefName:string,
     hours:any,
     address:string ,
