@@ -1,5 +1,5 @@
 import data from '../../epicure.json';
-import HomeCard from '../General/HomeCard/HomeCard';
+import HomeCard from '../General/CardGeneral/CardGeneral';
 import './PopularDish.css'
 import spicy from '../../assets/icon/spicy.svg'
 import React, { useState } from 'react'

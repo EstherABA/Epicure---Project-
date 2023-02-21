@@ -1,5 +1,5 @@
 import React from 'react';
-import HomeCard from '../General/HomeCard/HomeCard';
+import HomeCard from '../General/CardGeneral/CardGeneral';
 import './ChefOfWeek.css';
 import ChefPortraitCard from '../General/ChefPortraitCard/ChefPortraitCard';
 import data from '../../epicure.json';

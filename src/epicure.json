@@ -98,6 +98,7 @@
         "id":1,
         "name": "Claro",
         "image": "assets/images/claro.png",
+        "imageHero": "assets/images/claroHero.png",
         "chefName": "Ran Smuali",
         "hours": "",
         "address": "",
@@ -107,7 +108,7 @@
         "mostPopular": true,
         "openHour": 8,
         "closeHour": 15,
-        "dishes": [[], [], []]
+        "dishes": [1,2,3,4,5]
       },
       {
         "id":2,
@@ -122,7 +123,7 @@
         "mostPopular": false,
         "openHour": 16,
         "closeHour": 20,
-        "dishes": [[], [], []]
+        "dishes": [1,2]
       },      
       {
         "id":3,
@@ -137,7 +138,7 @@
         "mostPopular": false,
         "openHour": 14,
         "closeHour": 21,
-        "dishes": [[], [], []]
+        "dishes": [3,4,2]
       },
       {
         "id":7,
@@ -152,7 +153,7 @@
         "mostPopular": false,
         "openHour": 8,
         "closeHour": 20,
-        "dishes": [[], [], []]
+        "dishes": []
       },
       {
         "id":8,
@@ -268,6 +269,36 @@
         "restaurant": "",
         "ingredients": "Basil dough, cashew 'butter', demi-glace, bison & radish",
         "isSignatureDish": true,
+        "isSpicy": false,
+        "isVegan": true,
+        "isVegetarian": false,
+        "optionalSides": [],
+        "optionalChanges": []
+      },
+      {
+        "id": 4,
+        "name": "sssss",
+        "image": "assets/images/dishes/SmokedPizza.png",
+        "price": 76,
+        "chef": "",
+        "restaurant": "",
+        "ingredients": "Basil dough, cashew 'butter', demi-glace, bison & radish",
+        "isSignatureDish": false,
+        "isSpicy": false,
+        "isVegan": true,
+        "isVegetarian": false,
+        "optionalSides": [],
+        "optionalChanges": []
+      },
+      {
+        "id": 5,
+        "name": "lala",
+        "image": "assets/images/dishes/SmokedPizza.png",
+        "price": 76,
+        "chef": "",
+        "restaurant": "",
+        "ingredients": "Basil dough, cashew 'butter', demi-glace, bison & radish",
+        "isSignatureDish": false,
         "isSpicy": false,
         "isVegan": true,
         "isVegetarian": false,

@@ -1,7 +1,7 @@
 import React from 'react';
 // import data from '../../epicure.json';
 import './RestaurantsPage.css'
-import HomeCard from '../General/HomeCard/HomeCard';
+import HomeCard from '../General/CardGeneral/CardGeneral';
 import NavBar from '../NavBar/NavBar';
 import FilterBarByNew from '../General/FilterBarByNew/FIlterBarByNew';
 import FilterBarByPrice from '../General/FilterBarByPrice/FilterBarByPrice'
@@ -19,7 +19,7 @@ const RestaurantsPage: React.FC= () => {
     const navigate = useNavigate();
     const restaurantsCards = AllRestaurants.map((restaurant:Restaurant) =>{
         return <HomeCard 
-        onClick={()=> navigate("/chefs")}
+        onClick={()=> navigate(`/restaurants/${restaurant.id}`)}
         class='one-restaurant'
         ImgSrc={require(`../../${restaurant.image}`)} 
         ImgAlt={restaurant.name}  

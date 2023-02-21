@@ -1,6 +1,6 @@
 import {createSlice} from "@reduxjs/toolkit"
 import data from '../../epicure.json';
-import HomeCard from '../../components/General/HomeCard/HomeCard'
+import HomeCard from '../../components/General/CardGeneral/CardGeneral'
 
 export const RestaurantsSlice = createSlice({
     name: "Restaurants",

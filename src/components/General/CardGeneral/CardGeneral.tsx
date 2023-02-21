@@ -1,9 +1,9 @@
 import React from 'react';
-import {IHomeCard} from '../../../Interfaces';
-import "./HomeCard.css";
+import {ICard} from '../../../Interfaces';
+import "./CardGeneral.css";
 
 
-const RestaurantCard: React.FC<IHomeCard> = (props:IHomeCard) => {
+const RestaurantCard: React.FC<ICard> = (props:ICard) => {
       
       return (
             <button className= {`card ${props.class}`} onClick={props.onClick}>

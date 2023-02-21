@@ -8,7 +8,7 @@ export interface IButtonProps{
     onClick?: React.MouseEventHandler<HTMLButtonElement>,
 }
 
-export interface IHomeCard{
+export interface ICard{
     class?: string,
     ImgSrc?:string,
     ImgAlt?:string,
@@ -44,12 +44,15 @@ export interface Restaurant {
     id:number,
     name:string,
     image:string,
+    imageHero:string,
     chefName:string,
     hours:any,
     address:string ,
     rating: string,
     isPopular: boolean,
-    dishes:Array<string>
+    dishes:Array<number>,
+    openHour: number,
+    closeHour: number,
 }
 
 export interface RestaurantsState {
@@ -70,4 +73,21 @@ export interface Chef {
 
 export interface ChefsState {
     value: Chef[];
+}
+
+export interface Dish {
+    id:number,
+    name:string,
+    image: string,
+    price: number,
+    isSignatureDish:boolean, 
+    chefId: string,
+    restaurant: string,
+    ingredients: string,
+    properties: Array<string>,
+    optionalSides: Array<string>,
+    optionalChanges: Array<string>,
+}
+export interface DishesState {
+    value: Dish[];
 }
