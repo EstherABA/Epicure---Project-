@@ -8,6 +8,7 @@ import { Restaurant, Dish } from '../../Interfaces'
 import { useParams } from 'react-router-dom';
 import Clock from '../../assets/icon/clock.svg';
 import NavBar from '../NavBar/NavBar';
+import Footer from '../General/Footer/Footer';
 
 
 const SingleRestaurant: React.FC = () => {
@@ -81,6 +82,7 @@ const SingleRestaurant: React.FC = () => {
                 })
             }
         </div>
+        <Footer />
         
         
     </div>
