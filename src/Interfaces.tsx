@@ -19,6 +19,7 @@ export interface ICard{
     ingredients?: string,
     currency?: string,
     price?: number,
+    priceLine?:string,
     onClick?: React.MouseEventHandler<HTMLButtonElement>
 }
 

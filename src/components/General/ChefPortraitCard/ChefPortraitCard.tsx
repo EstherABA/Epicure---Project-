@@ -8,7 +8,7 @@ const ChefPortraitCard: React.FC <IChefPortrait> = (props:IChefPortrait ) => {
         <div className='chef-container'>
             <div className='chef-img-name-box'>
             <img className='chef-img' src={props.src} alt={props.alt} />
-            <p className='chef-name'> {props.name}</p>
+            <p className='chef-name-popular'> {props.name}</p>
             </div>
             <div className='chef-description'> {props.description} </div>
         </div>

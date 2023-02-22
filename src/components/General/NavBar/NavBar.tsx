@@ -1,10 +1,10 @@
 import React from 'react';
 import './NavBar.css'
-import ButtonG from '../General/ButtonGeneral/ButtonG'
-import logoEpicure from '../../assets/logoEpicure.svg'
-import Search from '../../assets/icon/Search.svg'
-import Shop from '../../assets/icon/Shop.svg'
-import User from '../../assets/icon/User.svg'
+import ButtonG from '../ButtonGeneral/ButtonG'
+import logoEpicure from '../../../assets/icon/logoEpicure.svg'
+import Search from '../../../assets/icon/Search.svg'
+import Shop from '../../../assets/icon/Shop.svg'
+import User from '../../../assets/icon/User.svg'
 import { useNavigate } from 'react-router-dom';
 
 

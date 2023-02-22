@@ -3,14 +3,22 @@
     font-family: "Helvetica Neue Thin";
     position: relative;
     overflow: hidden;
+    height: 35px;
+    display: flex;
+    align-items: center;
 }
 
 button:hover {
     cursor: pointer;
 }
+.btn-title{
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 1.92px;
+    margin: 0;
+}
 
-
- button:hover:after{
+ /* button:hover:after{
     content: '';
     position: absolute;
     width: 100%;
@@ -18,7 +26,7 @@ button:hover {
     left:0; 
     bottom: 0;
     background:#fda32d;
- }
+ } */
 
 .search-icon{
     padding: 10px;

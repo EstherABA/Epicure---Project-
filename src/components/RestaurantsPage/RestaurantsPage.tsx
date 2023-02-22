@@ -2,7 +2,7 @@ import React from 'react';
 // import data from '../../epicure.json';
 import './RestaurantsPage.css'
 import CardGeneral from '../General/CardGeneral/CardGeneral';
-import NavBar from '../NavBar/NavBar';
+import NavBar from '../General/NavBar/NavBar';
 import FilterBarByNew from '../General/FilterBarByNew/FIlterBarByNew';
 import FilterBarByPrice from '../General/FilterBarByPrice/FilterBarByPrice'
 import Footer from '../General/Footer/Footer';

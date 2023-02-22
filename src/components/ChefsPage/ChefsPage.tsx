@@ -1,5 +1,5 @@
 import React from 'react';
-import NavBar from '../NavBar/NavBar';
+import NavBar from '../General/NavBar/NavBar';
 import ChefPortraitCard from '../General/ChefPortraitCard/ChefPortraitCard';
 import FilterBarByNew from '../General/FilterBarByNew/FIlterBarByNew';
 import Footer from '../General/Footer/Footer';

@@ -15,7 +15,7 @@ const PopularRestaurant: React.FC = () => {
         ImgSrc={require(`../../${item.image}`)} 
         name={item.name} 
         ImgAlt={item.name}  
-        chefName={item.chefId} 
+        chefName={item.chefName} 
         moreInfoSrc={require(`../../assets/icon/star${item.rating}.svg`)}
       />
     }
