@@ -31,7 +31,7 @@ const AboutUs: React.FC = () => {
                 </div>
             </div>
             <div>
-                <ButtonG class='aboutUs-epicure-logo'src={logoAboutUs} alt="epicure logo" />
+                <ButtonG anotherClass='aboutUs-epicure-logo'src={logoAboutUs} alt="epicure logo" />
             </div>
 
         </div>

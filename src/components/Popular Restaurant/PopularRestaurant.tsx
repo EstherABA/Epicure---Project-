@@ -30,7 +30,7 @@ const PopularRestaurant: React.FC = () => {
       <div className='popular-container'>
         {items}
       </div>
-      <ButtonG  class='all-restaurant-btn' src={require(`../../assets/AllRestaurant.svg`).default}/>
+      <ButtonG  anotherClass='all-restaurant-btn' src={require(`../../assets/AllRestaurant.svg`).default}/>
     </>
   )
 

@@ -43,7 +43,7 @@ const SingleRestaurant: React.FC = () => {
         if(showTime >= mapRestaurants.openHour  && showTime <= mapRestaurants.closeHour!){
             return <div> <p className='open-now'> <img src={Clock}/> Open now</p></div>
             }
-        else {return <p>it's Close</p>}}
+        else {return <p className='open-now'>it's Close</p>}}
 
     const dishesPresentInPage = arrOfDishesOfRest.map((dish:Dish)=>{
         return <CardGeneral 
@@ -61,6 +61,7 @@ const SingleRestaurant: React.FC = () => {
   
     return (
         <>
+    
             <NavBar />
             <div className='single-restaurant-container'>
                 <img src={require(`../../${mapRestaurants.imageHero}`)} className='restaurant-page-image'></img>
@@ -70,9 +71,9 @@ const SingleRestaurant: React.FC = () => {
                 </div>
                     {openingHours()}
                 <nav className='nav-container'> 
-                    <ButtonG title='Breakfast'/>
-                    <ButtonG title='Lunch'/>
-                    <ButtonG title='Dinner'/>
+                    <ButtonG anotherClass='btn-with-line' title='Breakfast'/>
+                    <ButtonG anotherClass='btn-with-line' title='Lunch'/>
+                    <ButtonG anotherClass='btn-with-line' title='Dinner'/>
                 </nav>
                 
                 <div className='dishes-container'>
