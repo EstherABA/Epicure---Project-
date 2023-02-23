@@ -1,0 +1,8 @@
+.all-chefs{
+    display: grid;
+    grid-template-columns:400px 400px 400px ;
+    grid-template-rows:360px 360px 360px ;
+    gap: 40px 40px;
+    justify-content: center;
+    margin-top: 50px;
+}
