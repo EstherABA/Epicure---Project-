@@ -265,8 +265,8 @@
         "isSpicy": false,
         "isVegan": false,
         "isVegetarian": false,
-        "optionalSides": [],
-        "optionalChanges": []
+        "optionalSides": ["White bread"],
+        "optionalChanges": ["Sticky Less spicy"]
       },
       {
         "id": 3,

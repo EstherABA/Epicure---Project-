@@ -7,12 +7,12 @@ export interface IButtonProps{
     anotherClass?: string,
     onClick?: React.MouseEventHandler<HTMLButtonElement>,
 }
-export interface IModalProps{
-   state?: boolean,
-   dish?: any,
-   dishId?: number,
+export interface IModal {
+    showModal: boolean;
+    selectedDishId: number;
+    dishes: Array<Dish>;
+    closeModal: () => void;
 }
-
 export interface ICard{
     class?: string,
     ImgSrc?:string,

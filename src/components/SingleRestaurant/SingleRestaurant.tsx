@@ -49,12 +49,11 @@ const SingleRestaurant: React.FC = () => {
         priceLine={LineAroundPrice}
         onClick= {()=> {
             setDishId(dish.id)
-            setModal(!modalState)
+            setModal(true)
         }}
         />
         
     });
-    console.log(arrDishesObj , "arrDishesObj");
     
     const date = new Date();
     const showTime = date.getHours();
@@ -65,7 +64,7 @@ const SingleRestaurant: React.FC = () => {
         else {return <p className='open-now'>it's Close</p>}}
     return (
         <>
-        <Modal state={modalState} dishId={dishIdState} dish={arrDishesObj} />
+        <Modal showModal={modalState} selectedDishId={dishIdState} dishes={allDishes} closeModal={() => setModal(false)} />
         <NavBar />
         <div className='single-restaurant-container'>
             <img src={require(`../../${mapRestaurants.imageHero}`)} className='restaurant-page-image'></img>

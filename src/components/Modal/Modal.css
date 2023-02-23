@@ -26,29 +26,28 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 52%;
+    top: 56%;
     left: 50%;
     transform: translate(-50%, -50%);
     line-height: 1.4;
     background: #f1f1f1;
-    /* padding: 4px 8px; */
     border-radius: 3px;
     height: 900px; 
     width: 500px;
-    /* min-width: 300px; */
     z-index: 4;
 }
 
 .close-modal {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    padding: 5px 7px;
+    top: 0;
+    left:26%;
+    /* background: #000000; */
+    z-index: 5;
 }
 .dish-modal{
     font-size: 20px;
     width: 100%;
-    height: 64%;
+    height: 54%;
 }
 .dish-modal-form{
     display: flex;
@@ -56,18 +55,35 @@
     align-items: center;
     justify-content: center;
 }
-.form-part{
-    display: flex;
-    flex-direction: column;
-}
+
 .add-to-bag{
+    text-align: center;
     box-sizing: border-box;
     padding: 5px 24px;
     width: 206px;
     height: 48px;
     background: #000000;
     border: 1px solid #000000;
+    color: white;
 }
-input{
-    width: 2%;
+
+.with-line{
+    text-decoration: underline;
+    text-decoration-color: #DE9200;
+    font-size:20px;  
+}
+.Quantity-container{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Quantity{
+    display: flex;
+    flex-direction: row;
+    gap:30px;
+    height: 25%;
+}
+button{
+    all:unset
 }

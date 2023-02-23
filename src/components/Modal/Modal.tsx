@@ -1,67 +1,86 @@
 import  React from 'react';
 import {useState} from 'react';
 import './Modal.css'
-import {IModalProps} from '../../Interfaces'
+import Plus from '../../assets/icon/plus.svg'
+import Subtract from '../../assets/icon/subtract.svg'
+import Exit from '../../assets/icon/exit.svg'
+import {Dish, IModal} from '../../Interfaces'
 import SingleRestaurant from '../SingleRestaurant/SingleRestaurant';
 import CardGeneral from '../General/CardGeneral/CardGeneral';
-import LineAroundPrice from '../../assets/icon/LineAroundPrice.svg'
+import LineAroundPrice from '../../assets/icon/LineAroundPrice.svg';
 
-const Modal: React.FC<IModalProps> = (props:IModalProps) => {
-    const [modalState, setModal] =  useState(false)
+const Modal: React.FC<IModal> = (props:IModal) => {
+    const [modalState, setModal] =  useState(true)
+    const [Quantity, setQuantity] =  useState(0)
     
-    if (props.state) {
-        document.body.classList.add('active-modal')
-    } else {document.body.classList.remove('active-modal')}
-    
-    let chosenDish = props.dish.filter((x:any)=> {
-                    return x.id === props.dishId
+    let chosenDish:Dish = props.dishes.filter((dishObj:Dish)=> {
+                    return dishObj.id === props.selectedDishId
                 })[0];
 
+    console.log(modalState, "modalStateM");
+                
+    const handleCloseModal = () => {
+        console.log("hiiiii");
+        
+        setModal(false)
+    }
+    const handlePlusClick = ()=>{
+        setQuantity(Quantity+1)
+    }
+    const handleSubtractClick = ()=>{
+        setQuantity(Quantity-1)
+    }
     return ( <>
-        {(props.state) &&(
+        {(props.showModal) &&(
+        <>
         <div className="modal">
             <div className="overlay" ></div>
             <div className="modal-content">
-                <div>{
-                        <CardGeneral 
-                        class='dish-modal'
-                        ImgSrc={require(`../../${chosenDish.image}`)}
-                        ImgAlt={chosenDish.name}
-                        name={chosenDish.name}
-                        ingredients= {chosenDish.ingredients}
-                        currency= {require('../../assets/icon/ils.svg').default}
-                        price= {chosenDish.price}
-                        priceLine={LineAroundPrice} 
-                        />
-                    }
-                    <form className='dish-modal-form'>
-                        <div className='form-part'>
-                            <p>Choose a side</p>
-                             <input type="radio" value="white Bread"></input>
-                             <label>White Bread</label>
-                            <input type="radio" value="Sticky Rice"></input>
-                            <label>Sticky Rice</label>
-                        </div>    
-                        <div>
-                            <p>Changes</p>
-                            <input type="checkbox" value="without"></input>
-                            <label>without</label>
-                            <input type="checkbox" value="less spicy"></input>
-                            <label>less spicy</label>
-                        </div>    
-                        <div>
-                            <p>Quantity</p>
-                            <p>1</p>
-                            <button className='add-to-bag'>ADD TO BAG</button>
-                        </div>    
-                    </form>
-                   
+                {
+                    <CardGeneral 
+                    class='dish-modal'
+                    ImgSrc={require(`../../${chosenDish.image}`)}
+                    ImgAlt={chosenDish.name}
+                    name={chosenDish.name}
+                    ingredients= {chosenDish.ingredients}
+                    currency= {require('../../assets/icon/ils.svg').default}
+                    price= {chosenDish.price}
+                    priceLine={LineAroundPrice} 
+                    />
+                }
+                <form className='dish-modal-form'>
+                    <p className='with-line'>Choose a side</p>
+                    {
+                    chosenDish.optionalSides.map((option:string)=>{
+                        return <div className='form-part'>
+                        <input type="radio" value={option}></input>
+                        <label>{option}</label>
+                        </div>})   
+                    } 
+                    <p className='with-line'>Changes</p>
 
+                    {
+                    chosenDish.optionalChanges.map((change:string)=>{
+                        return <div className='form-part'>
+                        <input type="checkbox" value={change}></input>
+                        <label>{change}</label>
+                        </div>})   
+                    } 
+                </form>
+                <div className='Quantity-container'>
+                    <p>Quantity</p>
+                    <div className='Quantity'>
+                        <button onClick={handleSubtractClick}><img src={Subtract}/></button>
+                        <p>{Quantity}</p>
+                        <button onClick={handlePlusClick}><img src={Plus}/></button>
+                    </div>    
+                    <button className='add-to-bag'>ADD TO BAG</button>
                 </div>
-                <button className='close-modal' onClick={()=>setModal(false)}>
-                Close</button>
             </div>
         </div>
+                <button className='close-modal' onClick={()=>props.closeModal}>
+                    <img src={Exit}/></button>
+        </>
         
           )} </> );
 }
