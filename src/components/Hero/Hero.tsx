@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
                 
                 <div className="search-input">
                     <ButtonG src={Search} alt="search"/>
-                    <input placeholder=" Search for restaurant cuisine, chef"/> 
+                    <input className="input-hero" placeholder=" Search for restaurant cuisine, chef"/> 
                 </div>
             </div>
         </div>

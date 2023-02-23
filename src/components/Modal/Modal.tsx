@@ -4,23 +4,18 @@ import './Modal.css'
 import {IModalProps} from '../../Interfaces'
 import SingleRestaurant from '../SingleRestaurant/SingleRestaurant';
 import CardGeneral from '../General/CardGeneral/CardGeneral';
-// import ReactModal from 'react-modal';
-
+import LineAroundPrice from '../../assets/icon/LineAroundPrice.svg'
 
 const Modal: React.FC<IModalProps> = (props:IModalProps) => {
     const [modalState, setModal] =  useState(false)
-    // const toggleModal = () => {
-    //     setModal(!modalState);
-    // }
+    
     if (props.state) {
         document.body.classList.add('active-modal')
     } else {document.body.classList.remove('active-modal')}
     
-    let t = props.dish.filter((x:any)=> {
+    let chosenDish = props.dish.filter((x:any)=> {
                     return x.id === props.dishId
                 })[0];
-
-    console.log(t, "t");
 
     return ( <>
         {(props.state) &&(
@@ -29,30 +24,36 @@ const Modal: React.FC<IModalProps> = (props:IModalProps) => {
             <div className="modal-content">
                 <div>{
                         <CardGeneral 
-                        class='dish-card'
-                        ImgSrc={require(`../../${t.image}`)}
-                        ImgAlt={t.name}
-                        name={t.name}
-                        ingredients= {t.ingredients}
+                        class='dish-modal'
+                        ImgSrc={require(`../../${chosenDish.image}`)}
+                        ImgAlt={chosenDish.name}
+                        name={chosenDish.name}
+                        ingredients= {chosenDish.ingredients}
                         currency= {require('../../assets/icon/ils.svg').default}
-                        price= {t.price}
-                        // priceLine={LineAroundPrice} 
+                        price= {chosenDish.price}
+                        priceLine={LineAroundPrice} 
                         />
                     }
-                    <form>
-                        <p>Choose a side</p>
-                        <ul>
-                            <li> white Bread</li>
-                            <li> Sticky Rice</li>
-                        </ul>
-                        <p>Changes</p>
-                        <ul>
-                            <li> without</li>
-                            <li> less spicy</li>
-                        </ul>
-                        <p>Quantity</p>
-                        <p>1</p>
-                        <button>ADD TO BAG</button>
+                    <form className='dish-modal-form'>
+                        <div className='form-part'>
+                            <p>Choose a side</p>
+                             <input type="radio" value="white Bread"></input>
+                             <label>White Bread</label>
+                            <input type="radio" value="Sticky Rice"></input>
+                            <label>Sticky Rice</label>
+                        </div>    
+                        <div>
+                            <p>Changes</p>
+                            <input type="checkbox" value="without"></input>
+                            <label>without</label>
+                            <input type="checkbox" value="less spicy"></input>
+                            <label>less spicy</label>
+                        </div>    
+                        <div>
+                            <p>Quantity</p>
+                            <p>1</p>
+                            <button className='add-to-bag'>ADD TO BAG</button>
+                        </div>    
                     </form>
                    
 
