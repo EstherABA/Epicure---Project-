@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './SingleRestaurant.css';
 import CardGeneral from '../General/CardGeneral/CardGeneral';
 import { ICard } from '../../Interfaces';
@@ -11,41 +11,33 @@ import NavBar from '../General/NavBar/NavBar';
 import Footer from '../General/Footer/Footer';
 import ButtonG from '../General/ButtonGeneral/ButtonG';
 import LineAroundPrice from '../../assets/icon/LineAroundPrice.svg'
+import Modal from '../Modal/Modal';
 
 
 
 const SingleRestaurant: React.FC = () => {
-    const specificIdForRest = useParams();
-    let arrOfDishesOfRest: Array<Dish> = [];
+    const idFromRestNavigate = useParams();
+    let arrDishesObj: Array<Dish> = [];
 
     const allRestaurants = useSelector(
-        (state:RootState) => state.restaurants.value
-        );
+        (state:RootState) => state.restaurants.value);
     const allDishes = useSelector(
-        (state:RootState) => state.dishes.value
-    );
-        
+        (state:RootState) => state.dishes.value);
+    
     const mapRestaurants = allRestaurants.filter((restaurant:Restaurant) =>{
-        return restaurant.id === Number(specificIdForRest.id)
+        return restaurant.id === Number(idFromRestNavigate.id)
     })[0];
-        
-    mapRestaurants.dishes.map((dishIdFromArrInRest:number) =>{
-        allDishes.filter((dishObject:Dish)=> {
-        if(dishObject.id === dishIdFromArrInRest) {
-            arrOfDishesOfRest.push(dishObject)
-            }
-        });
+    mapRestaurants.dishes.map((DishIdFromRestObj:number) =>{
+        allDishes.filter((dishObj:Dish)=> {
+        if(dishObj.id === DishIdFromRestObj) {
+            arrDishesObj.push(dishObj)
+        }}); 
     });
 
-    const date = new Date();
-    const showTime = date.getHours();
-    const openingHours = () => {
-        if(showTime >= mapRestaurants.openHour  && showTime <= mapRestaurants.closeHour!){
-            return <div> <p className='open-now'> <img src={Clock}/> Open now</p></div>
-            }
-        else {return <p className='open-now'>it's Close</p>}}
+    const [modalState, setModal] =  useState(false)
+    const [dishIdState, setDishId] =  useState(0);
 
-    const dishesPresentInPage = arrOfDishesOfRest.map((dish:Dish)=>{
+    const dishesPresentInPage = arrDishesObj.map((dish:Dish)=>{
         return <CardGeneral 
         class='dish-card'
         ImgSrc={require(`../../${dish.image}`)}
@@ -55,32 +47,43 @@ const SingleRestaurant: React.FC = () => {
         currency= {require('../../assets/icon/ils.svg').default}
         price= {dish.price}
         priceLine={LineAroundPrice}
+        onClick= {()=> {
+            setDishId(dish.id)
+            setModal(!modalState)
+        }}
         />
-    })
         
-  
+    });
+    console.log(arrDishesObj , "arrDishesObj");
+    
+    const date = new Date();
+    const showTime = date.getHours();
+    const openingHours = () => {
+        if(showTime >= mapRestaurants.openHour  && showTime <= mapRestaurants.closeHour!){
+            return <div> <p className='open-now'> <img src={Clock}/> Open now</p></div>
+            }
+        else {return <p className='open-now'>it's Close</p>}}
     return (
         <>
-    
-            <NavBar />
-            <div className='single-restaurant-container'>
-                <img src={require(`../../${mapRestaurants.imageHero}`)} className='restaurant-page-image'></img>
-                <div className='info-restaurant'>
-                    <span className='rest-name'>{mapRestaurants.name}</span>
-                    <span>{mapRestaurants.chefName}</span>
-                </div>
-                    {openingHours()}
-                <nav className='nav-container'> 
-                    <ButtonG anotherClass='btn-with-line' title='Breakfast'/>
-                    <ButtonG anotherClass='btn-with-line' title='Lunch'/>
-                    <ButtonG anotherClass='btn-with-line' title='Dinner'/>
-                </nav>
-                
-                <div className='dishes-container'>
-                    {dishesPresentInPage}
-                </div>
-                <Footer />
+        <Modal state={modalState} dishId={dishIdState} dish={arrDishesObj} />
+        <NavBar />
+        <div className='single-restaurant-container'>
+            <img src={require(`../../${mapRestaurants.imageHero}`)} className='restaurant-page-image'></img>
+            <div className='info-restaurant'>
+                <span className='rest-name'>{mapRestaurants.name}</span>
+                <span>{mapRestaurants.chefName}</span>
             </div>
+            {openingHours()}
+            <nav className='nav-container'> 
+                <ButtonG anotherClass='btn-with-line' title='Breakfast'/>
+                <ButtonG anotherClass='btn-with-line' title='Lunch'/>
+                <ButtonG anotherClass='btn-with-line' title='Dinner'/>
+            </nav>
+            <div className='dishes-container'>
+                {dishesPresentInPage}
+            </div>
+            <Footer />
+        </div>
         </>
     )
     

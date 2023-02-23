@@ -7,6 +7,11 @@ export interface IButtonProps{
     anotherClass?: string,
     onClick?: React.MouseEventHandler<HTMLButtonElement>,
 }
+export interface IModalProps{
+   state?: boolean,
+   dish?: any,
+   dishId?: number,
+}
 
 export interface ICard{
     class?: string,

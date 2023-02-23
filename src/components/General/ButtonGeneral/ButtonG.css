@@ -37,9 +37,6 @@ button:hover {
     transform-origin: left;
     display: block !important;
 }
-/* .btn-with-line:hover::after{
-    transform: scaleX(1);
-} */
 .btn-with-line:hover::after,
 .btn-with-line:focus::after,
 .btn-with-line:active::after {
