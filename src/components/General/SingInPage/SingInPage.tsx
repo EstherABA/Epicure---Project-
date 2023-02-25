@@ -1,15 +1,17 @@
 import  React from 'react';
 import './SingInPage.css'
-import NavBar from '../General/NavBar/NavBar';
-import Footer from '../General/Footer/Footer';
-import orIcon from '../../assets/icon/orIcon.svg'
+import NavBar from '../NavBar/NavBar';
+import Footer from '../Footer/Footer';
+import orIcon from '../../../assets/icon/orIcon.svg';
+import { useNavigate } from 'react-router-dom';
 
 
 const SingInPage: React.FC = () => {
+    const navigate = useNavigate();
     return ( <>
         <NavBar />
         <div className="sing-in-container">
-            <div className="sign-up-titles">
+            <div className="sign-in-titles">
                 <div className='sign-in-title'>SIGN IN</div>
                 <div className='sign-in-sub-title'>To continue the order, please sign in</div>
             </div>
@@ -26,7 +28,7 @@ const SingInPage: React.FC = () => {
                     <button className='btn-form-sign-in' type='submit' >LOGIN</button>
                     <button className="forget-password">Forget password?</button>
                     <img src={orIcon} />
-                    <button className='btn-form-sign-up' type='submit' >Sign Up</button>
+                    <button className='btn-form-sign-up' type='submit' onClick={()=>navigate("/sign-up")}>Sign Up</button>
                 </div>
             </form>
         </div>
