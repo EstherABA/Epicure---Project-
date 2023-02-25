@@ -44,7 +44,7 @@ const Modal: React.FC<IModal> = (props:IModal) => {
                     />
                 }
                 <form className='dish-modal-form'>
-                    <p className='with-line'>Choose a side</p>
+                    <div className='with-line'>Choose a side</div>
                     {
                     chosenDish.optionalSides.map((option:string)=>{
                         return <div className='form-part'>
@@ -52,8 +52,7 @@ const Modal: React.FC<IModal> = (props:IModal) => {
                         <label>{option}</label>
                         </div>})   
                     } 
-                    <p className='with-line'>Changes</p>
-
+                    <div className='with-line'>Changes</div>
                     {
                     chosenDish.optionalChanges.map((change:string)=>{
                         return <div className='form-part'>
@@ -62,11 +61,11 @@ const Modal: React.FC<IModal> = (props:IModal) => {
                         </div>})   
                     } 
                 </form>
-                <div className='Quantity-container'>
-                    <p>Quantity</p>
-                    <div className='Quantity'>
+                <div className='quantity-container'>
+                    <div className='quantity-title'>Quantity</div>
+                    <div className='quantity'>
                         <button onClick={handleSubtractClick}><img src={Subtract}/></button>
-                        <p>{Quantity}</p>
+                        <span>{Quantity}</span>
                         <button onClick={handlePlusClick}><img src={Plus}/></button>
                     </div>    
                     <button className='add-to-bag'>ADD TO BAG</button>
