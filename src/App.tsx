@@ -5,6 +5,7 @@ import {BrowserRouter, Route, Routes } from "react-router-dom"
 import RestaurantPage from './components/RestaurantsPage/RestaurantsPage';
 import ChefsPage from './components/ChefsPage/ChefsPage';
 import SingleRestaurant from './components/SingleRestaurant/SingleRestaurant';
+import SingInPage from './components/SingInPage/SingInPage';
 
 const App: React.FC= () => {
   return (
@@ -13,6 +14,7 @@ const App: React.FC= () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/restaurants" element={<RestaurantPage />} />
         <Route path="/chefs" element={<ChefsPage />} />
+        <Route path="/sign-in" element={<SingInPage />} />
         <Route path="/restaurants/:id" element={<SingleRestaurant />} />
       </Routes>
     </BrowserRouter>
