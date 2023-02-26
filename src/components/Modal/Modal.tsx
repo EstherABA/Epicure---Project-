@@ -20,18 +20,16 @@ const Modal: React.FC<IModal> = (props:IModal) => {
     console.log(modalState, "modalStateM");
                 
     const handleCloseModal = () => {
-        console.log("hiiiii");
-        
-        setModal(false)
+        setModal(false);
     }
     const handlePlusClick = ()=>{
-        setQuantity(Quantity+1)
+        setQuantity(Quantity+1);
     }
     const handleSubtractClick = ()=>{
-        setQuantity(Quantity-1)
+        setQuantity(Quantity-1);
     }
     return ( <>
-        {(props.showModal) &&(
+        {(props.modalState) &&(
         <>
         <div className="modal">
             <div className="overlay" ></div>
@@ -78,7 +76,7 @@ const Modal: React.FC<IModal> = (props:IModal) => {
                 </div>
             </div>
         </div>
-                <button className='close-modal' onClick={()=>props.closeModal}>
+                <button className='close-modal' onClick={()=>props.setModal(false)}>
                     <img src={Exit}/></button>
         </>
         

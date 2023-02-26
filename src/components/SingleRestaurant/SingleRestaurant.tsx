@@ -34,7 +34,7 @@ const SingleRestaurant: React.FC = () => {
         }}); 
     });
 
-    const [modalState, setModal] =  useState(false)
+    const [modalState, setModal] =  useState(false);
     const [dishIdState, setDishId] =  useState(0);
 
     const dishesPresentInPage = arrDishesObj.map((dish:Dish)=>{
@@ -64,7 +64,7 @@ const SingleRestaurant: React.FC = () => {
         else {return <p className='open-now'>it's Close</p>}}
     return (
         <>
-        <Modal showModal={modalState} selectedDishId={dishIdState} dishes={allDishes} closeModal={() => setModal(false)} />
+        <Modal modalState={modalState} setModal={setModal} selectedDishId={dishIdState} dishes={allDishes} closeModal={() => setModal(false)} />
         <NavBar />
         <div className='single-restaurant-container'>
             <img src={require(`../../${mapRestaurants.imageHero}`)} className='restaurant-page-image'></img>

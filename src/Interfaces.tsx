@@ -8,7 +8,8 @@ export interface IButtonProps{
     onClick?: React.MouseEventHandler<HTMLButtonElement>,
 }
 export interface IModal {
-    showModal: boolean;
+    modalState: boolean;
+    setModal: any;
     selectedDishId: number;
     dishes: Array<Dish>;
     closeModal: () => void;
