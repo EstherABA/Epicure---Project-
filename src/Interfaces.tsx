@@ -15,6 +15,7 @@ export interface IModal {
     closeModal: () => void;
 }
 export interface ICard{
+    idName?: string,
     class?: string,
     ImgSrc?:string,
     ImgAlt?:string,

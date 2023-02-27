@@ -39,6 +39,7 @@ const Modal: React.FC<IModal> = (props:IModal) => {
                     class='dish-modal'
                     ImgSrc={require(`../../${chosenDish.image}`)}
                     ImgAlt={chosenDish.name}
+                    idName= {'dish-name-modal'}
                     name={chosenDish.name}
                     ingredients= {chosenDish.ingredients}
                     currency= {require('../../assets/icon/ils.svg').default}
