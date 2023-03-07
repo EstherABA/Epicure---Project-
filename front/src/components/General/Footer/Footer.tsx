@@ -5,9 +5,9 @@ import './Footer.css'
 
 const Footer: React.FC = () => {
     return ( 
-        <div>
+        <div  className='footer-container'>
             <img src={LineFooter} />
-            <div className='footer-container'>
+            <div className='footer-elements'>
                 <ButtonG title='Contact Us'/>
                 <ButtonG title='Term Of Use'/>
                 <ButtonG title='Privacy Policy'/>

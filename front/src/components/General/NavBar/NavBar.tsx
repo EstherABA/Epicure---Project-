@@ -23,10 +23,10 @@ const NavBar: React.FC = (props) => {
 
             <div className='side right'>
                 <div className='search-bar'>
-                    <input className='input' type='text' placeholder='  Search for restaurant cuisine, chef'/>
+                    <input className='input-nav-bar' type='text' placeholder='  Search for restaurant cuisine, chef'/>
                     <ButtonG anotherClass='search-icon' src={Search} alt="search"/>
                 </div>
-                    <ButtonG src={User} alt="user"/>
+                    <ButtonG src={User} alt="user" onClick={()=> navigate("/sign-in")}/>
                     <ButtonG src={Shop} alt="shop"/>
             </div>
         </div>
