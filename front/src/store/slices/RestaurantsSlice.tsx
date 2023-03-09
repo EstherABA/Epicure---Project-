@@ -16,8 +16,6 @@ const presentRestaurants = async () => {
   }
   
   const restaurantsAllData:IRestaurantsState = await presentRestaurants();
-  console.log(restaurantsAllData, "restaurantsAllData");
-  
   
 export const RestaurantsSlice = createSlice({
     name: "Restaurants",

@@ -10,7 +10,7 @@ export interface IButtonProps{
 export interface IModal {
     showModal: boolean;
     selectedDishId: number;
-    dishes: Array<Dish>;
+    dishes: Array<IDish>;
     closeModal: () => void;
 }
 export interface ICard{
@@ -79,10 +79,10 @@ export interface IChef {
 }
 
 export interface IChefsState {
-    value: IChef[];
+    value: Array<IChef>;
 }
 
-export interface Dish {
+export interface IDish {
     id:number,
     name:string,
     image: string,
@@ -95,6 +95,6 @@ export interface Dish {
     optionalSides: Array<string>,
     optionalChanges: Array<string>,
 }
-export interface DishesState {
-    value: Dish[];
+export interface IDishesState {
+    value: Array<IDish>;
 }
