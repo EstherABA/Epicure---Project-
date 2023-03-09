@@ -4,7 +4,7 @@ import CardGeneral from '../General/CardGeneral/CardGeneral';
 import { ICard } from '../../Interfaces';
 import { useSelector } from "react-redux";
 import { RootState } from '../../store/Store';
-import { Restaurant, Dish } from '../../Interfaces'
+import { IRestaurant, Dish } from '../../Interfaces'
 import { useParams } from 'react-router-dom';
 import Clock from '../../assets/icon/clock.svg';
 import NavBar from '../General/NavBar/NavBar';
@@ -24,7 +24,7 @@ const SingleRestaurant: React.FC = () => {
     const allDishes = useSelector(
         (state:RootState) => state.dishes.value);
     
-    const mapRestaurants = allRestaurants.filter((restaurant:Restaurant) =>{
+    const mapRestaurants = allRestaurants.filter((restaurant:IRestaurant) =>{
         return restaurant.id === Number(idFromRestNavigate.id)
     })[0];
     mapRestaurants.dishes.map((DishIdFromRestObj:number) =>{

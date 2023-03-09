@@ -1,12 +1,12 @@
-// import express, { Request, Response } from "express";
-// import {getAllRestaurants} from '../../controllers/restaurants.controllers'
+import express from "express";
+import {getAllRestaurants} from '../../controllers/restaurants.controllers'
 
-// const router = express.Router();
+const router = express.Router();
 
-// router.get("/restaurants", getAllRestaurants)
+router.get("/restaurants", getAllRestaurants)
 
-// const bodyParser = require("body-parser"); 
-// router.use(bodyParser.json());
+const bodyParser = require("body-parser"); 
+router.use(bodyParser.json());
 
 
-// export default router;
+export default router;

@@ -42,11 +42,11 @@ export interface IChefPortrait {
 }
 
 export interface RootState {
-    restaurants: RestaurantsState;
-    chefs: ChefsState;
+    restaurants: IRestaurantsState;
+    chefs: IChefsState;
 }
 
-export interface Restaurant {
+export interface IRestaurant {
     id:number,
     name:string,
     image:string,
@@ -62,11 +62,11 @@ export interface Restaurant {
     dishes:Array<number>,
 }
 
-export interface RestaurantsState {
-    value: Restaurant[];
+export interface IRestaurantsState {
+    value: Array<IRestaurant>;
 }
 
-export interface Chef {
+export interface IChef {
     id:number,
     name:string,
     portrait: string,
@@ -78,8 +78,8 @@ export interface Chef {
     mostViewed: boolean,
 }
 
-export interface ChefsState {
-    value: Chef[];
+export interface IChefsState {
+    value: IChef[];
 }
 
 export interface Dish {

@@ -1,4 +1,4 @@
-import express, { Request, Response } from "express";
+import express from "express";
 import {getAllChefs} from '../../controllers/chefs.controllers'
 
 const router = express.Router();

@@ -2,7 +2,7 @@ import React from 'react';
 import HomeCard from '../General/CardGeneral/CardGeneral';
 // import data from '../../epicure.json'
 import { useSelector } from 'react-redux';
-import { Restaurant, RootState } from '../../Interfaces'; 
+import { IRestaurant, RootState } from '../../Interfaces'; 
 import "./PopularRestaurant.css"
 import ButtonG from '../General/ButtonGeneral/ButtonG';
 
@@ -12,7 +12,7 @@ const PopularRestaurant: React.FC = () => {
   const allRestaurants = useSelector(
     (state:RootState) => state.restaurants.value
   );
-  const restaurantPopular = allRestaurants.map((restaurant:Restaurant) => { 
+  const restaurantPopular = allRestaurants.map((restaurant:IRestaurant) => { 
 
     if (restaurant.isPopular === true) {
       return <HomeCard 

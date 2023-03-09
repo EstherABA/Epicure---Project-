@@ -3,7 +3,7 @@ import {getChefs} from '../services/chefs.service';
 
 
 export const getAllChefs = async (req: Request, res: Response) => {
-    console.log("controller connected");
+    console.log("chefs controller connected");
     
     try {
         const _chefs = await getChefs();
