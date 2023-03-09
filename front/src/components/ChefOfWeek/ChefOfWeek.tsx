@@ -2,7 +2,7 @@ import React from 'react';
 import HomeCard from '../General/CardGeneral/CardGeneral';
 import './ChefOfWeek.css';
 import ChefPortraitCard from '../General/ChefPortraitCard/ChefPortraitCard';
-import data from '../../epicure.json';
+// import data from '../../epicure.json';
 import { Chef, RootState } from '../../Interfaces'; 
 import { useSelector } from 'react-redux';
 
@@ -25,7 +25,7 @@ const ChefOfWeek: React.FC = () => {
                 <p className=' title-of-the-week'>{`${chef.name} Restaurants:` } </p>
                 <div className='chef-restaurants'>
                     { 
-                        chef.restaurants.map((restaurant:any)=> <HomeCard ImgSrc={require(`../../${data.restaurants[6].image}`)} ImgAlt={restaurant} name={restaurant} />)
+                        // chef.restaurants.map((restaurant:any)=> <HomeCard ImgSrc={require(`../../${allChefs.restaurants[6].image}`)} ImgAlt={restaurant} name={restaurant} />)
                     }
                 </div>
             </div>) : (null)) });

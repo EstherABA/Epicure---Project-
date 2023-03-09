@@ -17,19 +17,19 @@ export const RestaurantsSlice = createSlice({
                 case "new":
                     state.value = data.restaurants
                     state.value = state.value.filter(
-                        (restaurant) => restaurant.isNew === true); 
+                        (restaurant:any) => restaurant.isNew === true); 
                     break;
                 case "mostPopular":
                     state.value = data.restaurants
                     state.value = state.value.filter(
-                        (restaurant) => restaurant.mostPopular === true); 
+                        (restaurant:any) => restaurant.mostPopular === true); 
                     break;
                 case "openNow":
                     state.value = data.restaurants
                     const date = new Date();
                     const showTime = date.getHours()
                     state.value = state.value.filter(
-                        (restaurant) => {
+                        (restaurant:any) => {
                             if(showTime >= restaurant.openHour!  && showTime <= restaurant.closeHour!){
                                 return restaurant
                             }

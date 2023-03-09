@@ -52,13 +52,14 @@ export interface Restaurant {
     image:string,
     imageHero?:string,
     chefName:string,
-    hours:any,
     address:string ,
     rating: string,
     isPopular: boolean,
-    dishes:Array<number>,
+    isNew: boolean,
+    mostPopular: boolean,
     openHour: number,
     closeHour: number,
+    dishes:Array<number>,
 }
 
 export interface RestaurantsState {
