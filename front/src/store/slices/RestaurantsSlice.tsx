@@ -1,5 +1,5 @@
 import {createSlice} from "@reduxjs/toolkit";
-import {IRestaurant,IRestaurantsState} from "../../Interfaces"
+import {IRestaurant} from "../../Interfaces"
 import data from '../../epicure.json';
 import HomeCard from '../../components/General/CardGeneral/CardGeneral'
 
@@ -15,7 +15,7 @@ const presentRestaurants = async () => {
     }
   }
   
-  const restaurantsAllData:IRestaurantsState = await presentRestaurants();
+  const restaurantsAllData:Array<IRestaurant> = await presentRestaurants();
   
 export const RestaurantsSlice = createSlice({
     name: "Restaurants",
@@ -31,13 +31,11 @@ export const RestaurantsSlice = createSlice({
                     break;
                 case "new":
                     state.value = restaurantsAllData
-                    state.value = state.value.filter(
-                        (restaurant:IRestaurant) => restaurant.isNew === true); 
+                    state.value = state.value.filter((restaurant:IRestaurant) => restaurant.isNew === true); 
                     break;
                 case "mostPopular":
                     state.value = restaurantsAllData
-                    state.value = state.value.filter(
-                        (restaurant:IRestaurant) => restaurant.mostPopular === true); 
+                    state.value = state.value.filter((restaurant:IRestaurant) => restaurant.mostPopular === true); 
                     break;
                 case "openNow":
                     state.value = restaurantsAllData
