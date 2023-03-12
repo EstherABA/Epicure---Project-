@@ -13,8 +13,6 @@ export const addUsers = async ( req: Request, res: Response) => {
     
     try {
         const dataOfUser = req.body
-        console.log( dataOfUser, "data from the user");
-        
         const _users = await getAllUsers(dataOfUser);
         return res
         .status(200)

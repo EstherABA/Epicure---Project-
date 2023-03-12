@@ -25,14 +25,7 @@ const SignUpPage:React.FC = () => {
     .then((response)=> response.json())
     .then((data) => {
       console.log(data, "data after post");
-      // setUerData(
-      //     {firstName: "",
-      //     lastName: "",
-      //     address: "",
-      //     email: "",
-      //     password: ""} 
-      // );
-    })
+      })
     .catch((err) => {
       console.log(err.message);
     });

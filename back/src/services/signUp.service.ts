@@ -9,19 +9,27 @@ interface IUser {
     password: string, 
 }
 
-export const getAllUsers = async(dataOfUser:IUser ) => {
+export const getAllUsers = async(dataOfUser:IUser) => {
     console.log("users services connected");
-    console.log(dataOfUser, "data of user");
+    const oldUser = await userModel.findOne({email: dataOfUser.email});
     
-    try {
-        const users = await userModel.find();
-        return users
-    }
-    catch(err){
-        console.log(err);
-        throw err;
-    }
+    if (oldUser) {
+        return "User Already Exist. Please Login";
+      }
+    else {
+        const _user = new userModel(dataOfUser);
+        try {
+            await _user.save();
+            return _user;
+        } catch (err) {
+            console.log(err);
+            throw err;
+        }
+    };
+            
 }
+       
+
 // export const postUser = async(user:any) =>{
 //     getAllUsers();
 //     console.log("  get all users services connected");
