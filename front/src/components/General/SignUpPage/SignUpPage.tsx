@@ -13,7 +13,10 @@ const SignUpPage:React.FC = () => {
     email: "",
     password: "", 
   })
-
+  const [userName, setUserName] = useState('Guest')
+  useEffect(()=> {
+    <div> Hello {userName}</div>
+  },[userName])
     
   useEffect(() => {
     console.log(userData, "userData state");
@@ -24,10 +27,11 @@ const SignUpPage:React.FC = () => {
     })
     .then((response)=> response.json())
     .then((data) => {
-      console.log(data, "data after post");
+      console.log(data, ",data after post");
+      // setUserName(data.firstName);
       })
     .catch((err) => {
-      console.log(err.message);
+      console.log(err.message,"error");
     });
   },[userData]);
 
@@ -77,6 +81,7 @@ const SignUpPage:React.FC = () => {
                     <button className='btn-form-sign-in' type='submit' >Sign up</button>
                 </div>
             </form>
+           
         </div>
 
     <Footer />

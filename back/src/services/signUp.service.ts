@@ -9,7 +9,7 @@ interface IUser {
     password: string, 
 }
 
-export const getAllUsers = async(dataOfUser:IUser) => {
+export const addUserService = async(dataOfUser:IUser) => {
     console.log("users services connected");
     const oldUser = await userModel.findOne({email: dataOfUser.email});
     
@@ -28,19 +28,13 @@ export const getAllUsers = async(dataOfUser:IUser) => {
     };
             
 }
-       
 
-// export const postUser = async(user:any) =>{
-//     getAllUsers();
-//     console.log("  get all users services connected");
-//     try {
-//         const users = await userModel.create(x);
-//         return users
-//     }
-//     catch(err){
-//         console.log(err);
-//         throw err;
-//     }
-  
-    
-// }
+export const getUsersService = async () => {
+try {
+    const chefs = await userModel.find();
+    return chefs;
+  } catch (err) {
+    console.log(err);
+    throw err;
+  }
+ };

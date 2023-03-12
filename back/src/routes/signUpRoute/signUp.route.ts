@@ -1,10 +1,10 @@
 import express from "express";
-import {addUsers} from '../../controllers/signUp.controllers'
+import {addUserController, getAllUsersController} from '../../controllers/signUp.controllers'
 
 const router = express.Router();
 
-router.get("/users", )
-router.post("/users", addUsers )
+router.get("/", getAllUsersController)
+router.post("/register", addUserController)
 
 const bodyParser = require("body-parser"); 
 router.use(bodyParser.json());
