@@ -15,29 +15,29 @@ export const addUserController = async ( req: Request, res: Response) => {
                 return "User Already Exist. Please Login";
             }
             else {
-                    //Encrypt user password
-                    const encryptedPassword = await bcrypt.hash( dataOfUser.password, 10);
-                    // Create user in database
-                    const newUseDocument = {
-                        firstName:dataOfUser.firstName,
-                        lastName:dataOfUser.lastName,
-                        address:dataOfUser.address,
-                        email:dataOfUser.email.toLowerCase(),
-                        password: encryptedPassword,
-                    }
-                    const _user = new userModel(newUseDocument);
-                    // Create token
-                    const token = jwt.sign(
-                        {  user_id: _user._id },
-                        process.env.JWT_SECRET!, 
-                        {expiresIn: "2h",}
-                    );
-                    // save user token
-                    _user.token = token;
-                await _user.save();
-                return res
-                .status(200)
-                .json(_user)
+                //Encrypt user password
+                const encryptedPassword = await bcrypt.hash( dataOfUser.password, 10);
+                // Create user in database
+                const newUseDocument = {
+                    firstName:dataOfUser.firstName,
+                    lastName:dataOfUser.lastName,
+                    address:dataOfUser.address,
+                    email:dataOfUser.email.toLowerCase(),
+                    password: encryptedPassword,
+                }
+                const _user = new userModel(newUseDocument);
+                // Create token
+                const token = jwt.sign(
+                    {  user_id: _user._id },
+                    process.env.JWT_SECRET!, 
+                    {expiresIn: "2h",}
+                );
+                // save user token
+                _user.token = token;
+            await _user.save();
+            return res
+            .status(200)
+            .json(_user)
             };
         
         } catch (err) {

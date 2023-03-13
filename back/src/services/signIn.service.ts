@@ -1,4 +1,4 @@
-import { IUser, userModel } from "../model/users.model";
+import { userModel } from "../model/users.model";
 // import express, { Request, Response } from "express";
 
 export const signInService = async (UserLoginInfo:any) => {

@@ -78,6 +78,18 @@ export interface IChef {
     mostViewed: boolean,
 }
 
+export interface IUser {
+    firstName?:string,
+    lastName?:string,
+    address?:string,
+    email:string,
+    password: string,
+    token?:string,
+}
+
+export interface IUsersState {
+    value: Array<IUser>;
+}
 export interface IChefsState {
     value: Array<IChef>;
 }
