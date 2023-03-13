@@ -5,35 +5,29 @@ import Footer from '../Footer/Footer';
 import { useState, useEffect } from 'react';
 
 const SignUpPage:React.FC = () => {
-
-  const [userData, setUerData] = useState({
+  const [infoFromUser, setUerData] = useState({
     firstName: "",
     lastName: "",
     address: "",
     email: "",
     password: "", 
   })
-  const [userName, setUserName] = useState('Guest')
-  useEffect(()=> {
-    <div> Hello {userName}</div>
-  },[userName])
-    
+  
   useEffect(() => {
-    console.log(userData, "userData state");
-    fetch('http://localhost:8000/api/signUp/users', {
+    console.log(infoFromUser, "infoFromUser state");
+    fetch('http://localhost:8000/api/users/register', {
       method: 'POST',
       headers: {'Content-type': 'application/json; charset=utf-8'},
-      body: JSON.stringify(userData)
+      body: JSON.stringify(infoFromUser)
     })
     .then((response)=> response.json())
     .then((data) => {
       console.log(data, ",data after post");
-      // setUserName(data.firstName);
-      })
+    })
     .catch((err) => {
       console.log(err.message,"error");
     });
-  },[userData]);
+  },[infoFromUser]);
 
   const handleSubmit = (evt:any)=> {
     evt.preventDefault();

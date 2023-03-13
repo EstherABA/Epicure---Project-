@@ -13,7 +13,7 @@ const presentChefs = async () => {
     }
   }
   
-  const chefs:IChefsState = await presentChefs();
+const chefs:IChefsState = await presentChefs();
   
   
 export const chefsSlice = createSlice({

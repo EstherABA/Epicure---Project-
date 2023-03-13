@@ -13,7 +13,7 @@ const presentDishes = async () => {
     }
   }
   
-  const dishes:IDishesState = await presentDishes();
+const dishes:IDishesState = await presentDishes();
 
 export const DishesSlice = createSlice({
     name: "Dishes",

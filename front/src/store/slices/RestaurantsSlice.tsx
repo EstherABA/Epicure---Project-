@@ -1,6 +1,5 @@
 import {createSlice} from "@reduxjs/toolkit";
 import {IRestaurant} from "../../Interfaces"
-import data from '../../epicure.json';
 import HomeCard from '../../components/General/CardGeneral/CardGeneral'
 
 const presentRestaurants = async () => { 

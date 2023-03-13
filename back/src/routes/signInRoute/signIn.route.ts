@@ -1,9 +1,9 @@
 import express from "express";
-// import {addUserController, getAllUsersController} from '../../controllers/signUp.controllers'
+import {signInController} from '../../controllers/signIn.controllers';
 
 const router = express.Router();
 
-router.get("/login", )
+router.post("/login",signInController )
 
 const bodyParser = require("body-parser"); 
 router.use(bodyParser.json());

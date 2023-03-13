@@ -32,9 +32,9 @@ const PopularRestaurant: React.FC = () => {
   return (
     <>
       <div className='popular-title-container'>POPULAR RESTAURANT IN EPICURE:</div>
-      <div className='popular-container'>
+      {/* <div className='popular-container'>
         {restaurantPopular}
-      </div>
+      </div> */}
       <ButtonG  anotherClass='all-restaurant-btn' src={require(`../../assets/AllRestaurant.svg`).default}/>
     </>
   )

@@ -4,10 +4,41 @@ import NavBar from '../NavBar/NavBar';
 import Footer from '../Footer/Footer';
 import orIcon from '../../../assets/icon/orIcon.svg';
 import { useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
 
 const SingInPage: React.FC = () => {
     const navigate = useNavigate();
+    const [infoUserLogin, setInfoUserLogin] = useState({
+        email: "",
+        password: ""
+    })
+      
+    useEffect(() => {
+        console.log(infoUserLogin, "infoFromUser state");
+        fetch('http://localhost:8000/api/users/login', {
+          method: 'POST',
+          headers: {'Content-type': 'application/json; charset=utf-8'},
+          body: JSON.stringify(infoUserLogin)
+        })
+        .then((response)=> response.json())
+        .then((data) => {
+          console.log(data, ",data after post");
+          })
+        .catch((err) => {
+          console.log(err.message,"error");
+        });
+    },[infoUserLogin]);
+    
+    
+    const handleLogin = (event:any)=> {
+        event.preventDefault();
+        setInfoUserLogin({
+          email: event.target[0].value,
+          password: event.target[1].value 
+        })
+    }
+
     return ( <>
         <NavBar />
         <div className="sing-in-container">
@@ -15,7 +46,7 @@ const SingInPage: React.FC = () => {
                 <div className='sign-in-title'>SIGN IN</div>
                 <div className='sign-in-sub-title'>To continue the order, please sign in</div>
             </div>
-            <form className='form-sign-in'>
+            <form className='form-sign-in' onSubmit={handleLogin}>
                 <div className="filed-holder">
                    <input className='input-sign-in' type='email' id='email' required/>
                    <label className='label-sign-in' htmlFor="email">Email Address</label> 
