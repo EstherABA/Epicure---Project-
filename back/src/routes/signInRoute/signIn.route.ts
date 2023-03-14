@@ -3,7 +3,7 @@ import {signInController} from '../../controllers/signIn.controllers';
 
 const router = express.Router();
 
-router.post("/login",signInController )
+router.put("/login",signInController )
 
 const bodyParser = require("body-parser"); 
 router.use(bodyParser.json());

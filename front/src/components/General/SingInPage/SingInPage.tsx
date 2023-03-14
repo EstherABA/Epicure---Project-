@@ -5,27 +5,30 @@ import Footer from '../Footer/Footer';
 import orIcon from '../../../assets/icon/orIcon.svg';
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch} from 'react-redux';
+import { presentUserName } from '../../../store/slices/UsersSlice';
 
 
 const SingInPage: React.FC = () => {
-    const navigate = useNavigate();
     const [infoUserLogin, setInfoUserLogin] = useState({
         email: "",
         password: ""
     })
+    const navigate = useNavigate();
+    const dispatch = useDispatch ();
+    const returnUserToHOmePage = ()=>navigate("/");
       
     useEffect(() => {
-        console.log(infoUserLogin, "infoFromUser state");
         fetch('http://localhost:8000/api/users/login', {
-          method: 'POST',
+          method: 'PUT',
           headers: {'Content-type': 'application/json; charset=utf-8'},
           body: JSON.stringify(infoUserLogin)
         })
         .then((response)=> response.json())
         .then((data) => {
-          console.log(data, ",data after post");
-          })
+          dispatch(presentUserName(data));
+          returnUserToHOmePage();
+        })
         .catch((err) => {
           console.log(err.message,"error");
         });

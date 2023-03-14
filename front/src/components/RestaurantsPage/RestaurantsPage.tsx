@@ -16,6 +16,12 @@ const RestaurantsPage: React.FC= () => {
     const AllRestaurants = useSelector(
         (state:RootState) => state.restaurants.value
     );
+    const AllUsers = useSelector(
+        (state:RootState) => state.users.value
+    );
+    console.log(AllUsers, "check oif user state changed");
+    
+    
     const navigate = useNavigate();
     const restaurantsCards = AllRestaurants.map((restaurant:IRestaurant) =>{
         return <CardGeneral

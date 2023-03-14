@@ -40,12 +40,6 @@ export interface IChefPortrait {
     name: string,
     description?: string,
 }
-
-export interface RootState {
-    restaurants: IRestaurantsState;
-    chefs: IChefsState;
-}
-
 export interface IRestaurant {
     id:number,
     name:string,
@@ -77,6 +71,9 @@ export interface IChef {
     viewCount: number,
     mostViewed: boolean,
 }
+export interface IChefsState {
+    value: Array<IChef>;
+}
 
 export interface IUser {
     firstName?:string,
@@ -89,9 +86,6 @@ export interface IUser {
 
 export interface IUsersState {
     value: Array<IUser>;
-}
-export interface IChefsState {
-    value: Array<IChef>;
 }
 
 export interface IDish {

@@ -22,9 +22,9 @@ export const signInController  = async ( req: Request, res: Response) => {
                 expiresIn: "2h",
               }
             );
-        // save user token
-        _user.token = token;
-        
+            // save user token
+            _user.token = token;
+
         return res
         .status(200)
         .json(_user)

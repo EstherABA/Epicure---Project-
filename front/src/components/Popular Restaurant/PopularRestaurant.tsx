@@ -2,7 +2,8 @@ import React from 'react';
 import HomeCard from '../General/CardGeneral/CardGeneral';
 // import data from '../../epicure.json'
 import { useSelector } from 'react-redux';
-import { IRestaurant, RootState } from '../../Interfaces'; 
+import { IRestaurant } from '../../Interfaces';
+import { RootState } from '../../store/Store'; 
 import "./PopularRestaurant.css"
 import ButtonG from '../General/ButtonGeneral/ButtonG';
 

@@ -3,7 +3,8 @@ import HomeCard from '../General/CardGeneral/CardGeneral';
 import './ChefOfWeek.css';
 import ChefPortraitCard from '../General/ChefPortraitCard/ChefPortraitCard';
 // import data from '../../epicure.json';
-import { IChef, RootState } from '../../Interfaces'; 
+import { IChef} from '../../Interfaces'; 
+import { RootState } from '../../store/Store';
 import { useSelector } from 'react-redux';
 
 
