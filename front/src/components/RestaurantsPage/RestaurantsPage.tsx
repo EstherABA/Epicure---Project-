@@ -8,7 +8,7 @@ import FilterBarByPrice from '../General/FilterBarByPrice/FilterBarByPrice'
 import Footer from '../General/Footer/Footer';
 import { useSelector } from "react-redux";
 import { RootState } from '../../store/Store';
-import { Restaurant } from '../../Interfaces'
+import { IRestaurant } from '../../Interfaces'
 import { useNavigate } from 'react-router-dom';
 
 
@@ -16,8 +16,14 @@ const RestaurantsPage: React.FC= () => {
     const AllRestaurants = useSelector(
         (state:RootState) => state.restaurants.value
     );
+    const AllUsers = useSelector(
+        (state:RootState) => state.users.value
+    );
+    console.log(AllUsers, "check oif user state changed");
+    
+    
     const navigate = useNavigate();
-    const restaurantsCards = AllRestaurants.map((restaurant:Restaurant) =>{
+    const restaurantsCards = AllRestaurants.map((restaurant:IRestaurant) =>{
         return <CardGeneral
         onClick={()=> navigate(`/restaurants/${restaurant.id}`)}
         class='one-restaurant'

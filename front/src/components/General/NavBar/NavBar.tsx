@@ -1,4 +1,4 @@
-import React from 'react';
+import React , { useMemo } from 'react';
 import './NavBar.css'
 import ButtonG from '../ButtonGeneral/ButtonG'
 import logoEpicure from '../../../assets/icon/logoEpicure.svg'
@@ -6,21 +6,40 @@ import Search from '../../../assets/icon/Search.svg'
 import Shop from '../../../assets/icon/Shop.svg'
 import User from '../../../assets/icon/User.svg'
 import { useNavigate } from 'react-router-dom';
+import {  useSelector } from 'react-redux';
+import { RootState } from '../../../store/Store';
+import { IUser } from '../../../Interfaces';
 
 
 
 const NavBar: React.FC = (props) => {
     const navigate = useNavigate();
+    const AllUsers = useSelector(
+        (state:RootState) => state.users.value
+    );
+    console.log(AllUsers, "user state from NAVBAR");
+    const handleUserSigning = useMemo(() => {
+        if (Object.keys(AllUsers).length === 2) {
+            console.log(AllUsers);
+            
+            return <div>{`Hello ${AllUsers.firstName} ${AllUsers.lastName}` }</div>;
+        }
+            return null
+    }, [AllUsers]);
+    
 
+      
+   
     return (
-
         <div className='nav-bar'> 
             <div className='side left'>
                 <ButtonG  anotherClass='logo' src={logoEpicure} alt="logo" onClick={()=> navigate("/")}/>
                 <ButtonG  anotherClass='btn-with-line' title='Restaurants' onClick={()=> navigate("/restaurants")}/>
                 <ButtonG  anotherClass='btn-with-line' title='Chefs' onClick={()=> navigate("/chefs")} />
             </div>
-
+                {
+                    <>{handleUserSigning}</>
+                }
             <div className='side right'>
                 <div className='search-bar'>
                     <input className='input-nav-bar' type='text' placeholder='  Search for restaurant cuisine, chef'/>
@@ -30,7 +49,6 @@ const NavBar: React.FC = (props) => {
                     <ButtonG src={Shop} alt="shop"/>
             </div>
         </div>
-
     )
 }
 

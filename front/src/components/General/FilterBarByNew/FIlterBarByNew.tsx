@@ -3,7 +3,7 @@ import { useState } from 'react';
 import ButtonG from '../ButtonGeneral/ButtonG';
 import './FilterBarByNew.css'
 import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '../../../Interfaces';
+import { RootState } from '../../../store/Store';
 import  {filterRestaurants}  from '../../../store/slices/RestaurantsSlice'
 
 const FilterBarByNew: React.FC = () => {
