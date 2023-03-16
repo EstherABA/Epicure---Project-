@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { MouseEventHandler } from 'react';
 
 export interface IButtonProps{
     title?:string,
@@ -35,10 +35,13 @@ export interface IProperties{
 }
 
 export interface IChefPortrait {
+    onClickDelete?:  React.MouseEventHandler<HTMLDivElement>
     src: string,
     alt: string,
     name: string,
+    idDescription?: string,
     description?: string,
+    deleteCardBtn?: string;
 }
 export interface IRestaurant {
     id:number,
