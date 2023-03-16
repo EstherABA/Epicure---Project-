@@ -17,17 +17,17 @@ const usersAllData = await presentUsers();
 export const UsersSlice = createSlice({
     name: "Users",
     initialState: {
-        value: usersAllData,
+        value: {},
     },
     reducers: {
         presentUserName: (state, action) => {
             const userRegisterData = action.payload;
             state.value = usersAllData
-            state.value = { 
+            state.value = 
+                { 
                 firstName: userRegisterData.firstName,
                 lastName: userRegisterData.lastName
-            }
-        }
+            }}
     }
 });
 

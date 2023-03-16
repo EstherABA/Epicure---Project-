@@ -8,5 +8,4 @@ router.get("/restaurants", getAllRestaurants)
 const bodyParser = require("body-parser"); 
 router.use(bodyParser.json());
 
-
 export default router;

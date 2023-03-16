@@ -1,11 +1,11 @@
 import * as React from 'react';
 import './SignUpPage.css'
-import NavBar from '../NavBar/NavBar';
 import Footer from '../Footer/Footer';
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { presentUserName } from '../../../store/slices/UsersSlice';
+import { RootState } from '../../../store/Store';
 
 const SignUpPage:React.FC = () => {
   const [infoUserSignUp, setInfoUserSignUp] = useState({
@@ -17,7 +17,10 @@ const SignUpPage:React.FC = () => {
   })
   const navigate = useNavigate();
   const dispatch = useDispatch ();
-  const returnUserToSignIn = ()=>navigate("/sign-in");
+  const returnUserToSignIn = ()=>{navigate("/sign-in")};
+  const AllUsers = useSelector(
+    (state:RootState) => state.users.value
+  );
 
   useEffect(() => {
     fetch('http://localhost:8000/api/users/register', {
@@ -48,7 +51,7 @@ const SignUpPage:React.FC = () => {
   }
   return ( 
     <>
-      <NavBar />
+      {/* <NavBar /> */}
       <div className="sing-up-container">
         <div className="sign-in-titles">
           <div className='sign-in-title'>SIGN UP</div>
@@ -56,23 +59,23 @@ const SignUpPage:React.FC = () => {
         </div>
         <form className='form-sign-in' onSubmit={handleSubmit}>
           <div className="filed-holder">
-              <input className='input-sign-in' name='first-name' type='text' id='first-name'  required/>
+              <input className='input-sign-in' name='first-name' type='text' id='first-name'/>
               <label className='label-sign-in' htmlFor="first-name">First Name</label> 
           </div>
           <div className="filed-holder">
-              <input className='input-sign-in'  type='text' id='last-name' required/>
+              <input className='input-sign-in'  type='text' id='last-name'/>
               <label className='label-sign-in' htmlFor="last-name">Last Name</label> 
           </div>
           <div className="filed-holder">
-              <input className='input-sign-in'  type='text' id='address' required/>
+              <input className='input-sign-in'  type='text' id='address'/>
               <label className='label-sign-in' htmlFor="address">Address</label> 
           </div>
           <div className="filed-holder">
-              <input className='input-sign-in' type='email' id='email' required/>
+              <input className='input-sign-in' type='email' id='email'/>
               <label className='label-sign-in' htmlFor="email">Email Address</label> 
           </div>
           <div className="filed-holder">
-              <input  className='input-sign-in'  type='password' id='password' required/>
+              <input  className='input-sign-in'  type='password' id='password'/>
               <label className='label-sign-in' htmlFor="password">Password</label> 
           </div>
           <div className="form-bottom">

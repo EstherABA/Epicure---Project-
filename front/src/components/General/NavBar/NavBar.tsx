@@ -12,17 +12,18 @@ import { IUser } from '../../../Interfaces';
 
 
 
-const NavBar: React.FC = (props) => {
+const NavBar: React.FC = () => {
     const navigate = useNavigate();
     const AllUsers = useSelector(
         (state:RootState) => state.users.value
     );
     console.log(AllUsers, "user state from NAVBAR");
+
     const handleUserSigning = useMemo(() => {
         if (Object.keys(AllUsers).length === 2) {
             console.log(AllUsers);
             
-            return <div>{`Hello ${AllUsers.firstName} ${AllUsers.lastName}` }</div>;
+            return <div>Hello {AllUsers.firstName} </div>;
         }
             return null
     }, [AllUsers]);

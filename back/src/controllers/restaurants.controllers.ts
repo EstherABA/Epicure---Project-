@@ -3,6 +3,7 @@ import {getRestaurants} from '../services/restaurants.service';
 
 
 export const getAllRestaurants = async (req: Request, res: Response) => {
+    
     try {
         const _restaurants = await getRestaurants();
         return res

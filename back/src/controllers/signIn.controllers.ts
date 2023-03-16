@@ -13,11 +13,14 @@ export const signInController  = async ( req: Request, res: Response) => {
             res.status(400).send("All input is required");
         }
         const _user = await signInService(UserLoginInfo);
+        
         if (_user && (await bcrypt.compare(UserLoginInfo.password, _user.password))) {
             // Create token
+            dotenv.config();
+            const userToken = process.env.JWT_SECRET || ''
             const token = jwt.sign(
               { user_id: _user._id},
-              process.env.JWT_SECRET!,
+              userToken,
               {
                 expiresIn: "2h",
               }
