@@ -3,11 +3,13 @@ import NavBar from '../General/NavBar/NavBar';
 import ChefPortraitCard from '../General/ChefPortraitCard/ChefPortraitCard';
 import FilterBarByNew from '../General/FilterBarByNew/FIlterBarByNew';
 import Footer from '../General/Footer/Footer';
-import {useSelector} from "react-redux";
+import {useSelector, useDispatch} from "react-redux";
 import { RootState } from '../../store/Store';
 import { IChef } from '../../Interfaces';
 import axios from 'axios';
 import './ChefsPage.css'
+import { updateDataAfterDeleteChefs } from '../../store/slices/ChefsSlice';
+import { METHODS } from 'http';
 
 
 
@@ -15,28 +17,35 @@ const ChefsPage: React.FC = () => {
     const AllChefs = useSelector(
         (state:RootState) => state.chefs.value
     );
+    const dispatch = useDispatch ();
     
-    const deleteRequest = async (id:number) => {
-        try {
-            await axios.delete(`api/chefs/${id}`)
+    const deleteRequest = async (e:any,chefId:number) => {
+        await fetch('http://localhost:8000/api/chefs/delete', {
+            method: 'DELETE',
+            headers: {'Content-type': 'application/json; charset=utf-8'},
+            body: JSON.stringify({id:chefId})
+          })
+          .then((response)=> response.json())
+          .then((data) => {
             //update the state on redux
-        }
-        catch (error) {
-        // Handle any errors that may occur
-        console.log(`Error deleting object with ID ${id}: ${error}`);
-      }
-        
-
-
+            dispatch(updateDataAfterDeleteChefs(data))
+          })
+          .catch((err) => {
+            console.log(err.message,"error");
+          });
     }
+
+
     const chefsCards = AllChefs.map((chef:IChef) =>{
         return  <ChefPortraitCard 
         src={require(`../../${chef.portrait}`)} 
         alt={`${chef.name}`} 
         name={`${chef.name}`} 
-        deleteCardBtn = {"delete chef"}
+        deleteCardBtn = {"delete"}
         idDescription= {"none-description"}
-        onClickDelete= {()=>deleteRequest(chef.id)}
+        onClickDelete= {(e)=>{console.log("delte button FUN", chef.id);
+        
+            deleteRequest(e,chef.id)}}
         />
     })
 

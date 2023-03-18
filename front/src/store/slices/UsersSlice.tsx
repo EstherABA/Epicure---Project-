@@ -13,8 +13,6 @@ const presentUsers = async () => {
     }
 }
 const usersAllData = await presentUsers();
-console.log(usersAllData, "user DATA");
-
 
 export const UsersSlice = createSlice({
     name: "Users",
@@ -24,12 +22,7 @@ export const UsersSlice = createSlice({
     reducers: {
         presentUserName: (state, action) => {
             const userRegisterData = action.payload;
-            console.log(userRegisterData , "userRegisterData")
-            
             state.value = usersAllData
-
-            console.log(state.value, " state from the reducer");
-            
             state.value = 
                 { 
                 firstName: userRegisterData.firstName,

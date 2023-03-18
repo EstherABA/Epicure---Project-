@@ -1,6 +1,6 @@
 import React from 'react';
 import HomeCard from '../General/CardGeneral/CardGeneral';
-// import data from '../../epicure.json'
+import data from '../../epicure.json'
 import { useSelector } from 'react-redux';
 import { IRestaurant } from '../../Interfaces';
 import { RootState } from '../../store/Store'; 
@@ -33,9 +33,9 @@ const PopularRestaurant: React.FC = () => {
   return (
     <>
       <div className='popular-title-container'>POPULAR RESTAURANT IN EPICURE:</div>
-      {/* <div className='popular-container'>
+      <div className='popular-container'>
         {restaurantPopular}
-      </div> */}
+      </div>
       <ButtonG  anotherClass='all-restaurant-btn' src={require(`../../assets/AllRestaurant.svg`).default}/>
     </>
   )
