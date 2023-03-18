@@ -21,7 +21,7 @@ export const deleteChefController = async (req: Request, res: Response) => {
       console.log("req body:" , id);
       
       try{
-        const updatedDataAfterDelete = await deleteChefService(id,req,res)
+        const updatedDataAfterDelete = await deleteChefService(id)
         return updatedDataAfterDelete
       }
       catch (err) {

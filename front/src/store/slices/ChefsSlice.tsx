@@ -24,7 +24,7 @@ export const chefsSlice = createSlice({
         updateDataAfterDeleteChefs: (state,action) => {
             const updatedChefsData = action.payload;
             state.value = chefs;
-            // state.value = updatedChefsData;
+            state.value = updatedChefsData;
         }
 
   
