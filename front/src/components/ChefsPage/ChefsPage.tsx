@@ -29,6 +29,8 @@ const ChefsPage: React.FC = () => {
           .then((data) => {
             //update the state on redux
             dispatch(updateDataAfterDeleteChefs(data))
+            //refresh
+            window.location.reload();
           })
           .catch((err) => {
             console.log(err.message,"error");

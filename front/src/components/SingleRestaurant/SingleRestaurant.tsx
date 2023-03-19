@@ -61,7 +61,9 @@ const SingleRestaurant: React.FC = () => {
         if(showTime >= mapRestaurants.openHour  && showTime <= mapRestaurants.closeHour!){
             return <div> <p className='open-now'> <img src={Clock}/> Open now</p></div>
             }
-        else {return <p className='open-now'>it's Close</p>}}
+        else {return <p className='open-now'>it's Close</p>}
+    }
+
     return (
         <>
         <Modal showModal={modalState} selectedDishId={dishIdState} dishes={allDishes} closeModal={() => setModal(false)} />

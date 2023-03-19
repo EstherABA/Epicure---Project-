@@ -15,6 +15,7 @@ const SignUpPage:React.FC = () => {
     email: "",
     password: "", 
   })
+  const [count, setCount] = useState(0);
   const navigate = useNavigate();
   const dispatch = useDispatch ();
   const returnUserToSignIn = ()=>{navigate("/sign-in")};
@@ -23,35 +24,39 @@ const SignUpPage:React.FC = () => {
   );
 
   useEffect(() => {
-    fetch('http://localhost:8000/api/users/register', {
+    if (count>1){
+      fetch('http://localhost:8000/api/users/register', {
       method: 'POST',
       headers: {'Content-type': 'application/json; charset=utf-8'},
       body: JSON.stringify(infoUserSignUp)
-    })
-    .then((response)=> response.json())
-    .then((data) => {
-      dispatch(presentUserName(data));
-      returnUserToSignIn();
-    })
-    .catch((err) => {
-      console.log(err.message,"error");
-    });
-  },[infoUserSignUp]);
+      })
+      .then((response)=> response.json())
+      .then((data) => {
+        dispatch(presentUserName(data));
+        returnUserToSignIn();
+      })
+      .catch((err) => {
+        console.log(err.message,"error");
+      });
+    }
+  },[infoUserSignUp,count]);
+  
+  
 
-  const handleSubmit = (evt:any)=> {
+  const handleSubmit = async (evt:any)=> {
     evt.preventDefault();
     setInfoUserSignUp({
       firstName: evt.target[0].value,
       lastName: evt.target[1].value,
       address: evt.target[2].value,
       email: evt.target[3].value,
-      password: evt.target[4].value 
+      password: evt.target[4].value
     })
- 
+    setCount(prevCount => prevCount + 1)
   }
+
   return ( 
     <>
-      {/* <NavBar /> */}
       <div className="sing-up-container">
         <div className="sign-in-titles">
           <div className='sign-in-title'>SIGN UP</div>

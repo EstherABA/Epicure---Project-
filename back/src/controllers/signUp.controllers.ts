@@ -2,15 +2,13 @@ import express, { Request, Response } from "express";
 import { userModel } from "../model/users.model";
 import {addUserService, getUsersService} from '../services/signUp.service';
 import bcrypt from "bcrypt";
-import dotenv from 'dotenv';
-import jwt, { Secret, JwtPayload } from 'jsonwebtoken';
+import jwt from 'jsonwebtoken';
 
 export const addUserController = async ( req: Request, res: Response) => {
     console.log("users controller connected");
+    const dataOfUser = req.body;
         try {
-        const dataOfUser = req.body
-        const _usersCheck = await addUserService(dataOfUser);
-
+            const _usersCheck = await addUserService(dataOfUser);
             if (_usersCheck) {
                 return "User Already Exist. Please Login";
             }
@@ -34,11 +32,12 @@ export const addUserController = async ( req: Request, res: Response) => {
                 );
                 // save user token
                 _user.token = token;
-            await _user.save();
-            return res
-            .status(200)
-            .json(_user)
-            };
+
+                await _user.save();
+        return res
+        .status(200)
+        .json(_user)
+        };
         
         } catch (err) {
             console.log(err);
